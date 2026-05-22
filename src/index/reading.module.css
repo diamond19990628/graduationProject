@@ -32,15 +32,6 @@
     display: flex;
     width: 25vw;
     height: 25vw;
-    background: linear-gradient(
-        145deg,
-        #C36027,
-        #E985FF,
-        #4A9624,
-        #85C6FF,
-        #FF6868,
-        #FFF385
-    );
     border-radius: 30px;
     justify-content: center;
     align-items: center;
@@ -73,4 +64,6 @@
     font-size: 1.2vw;
     color:#000;
     margin: -0.4vw 0 0 -0.6vw;
+    font-weight: 100;
+    font-family: "Regular";
 }
