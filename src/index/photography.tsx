@@ -1,5 +1,6 @@
+import { useState } from "react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Photography1 from "../assets/photography1.png";
 import Photography2 from "../assets/photography2.png";
@@ -17,11 +18,37 @@ const imgList = [
     {id:6, src:Photography6}
 ]
 const photograph: React.FC = () => {
+    const [isNextDown, setNextMouseDown] = useState(false);
+    const [isPrevDown, setPrevMouseDown] = useState(false);
+    const handleNextMouseDown: React.MouseEventHandler<HTMLDivElement> = (event) => {
+        setNextMouseDown(true);
+    };
+    const handlePrevMouseDown: React.MouseEventHandler<HTMLDivElement> = (event) => {
+        setPrevMouseDown(true);
+    };
+    const handleMouseUp: React.MouseEventHandler<HTMLDivElement> = (event) => {
+        setNextMouseDown(false);
+        setPrevMouseDown(false);
+    };
+
     return (
         <>
             <h1 className={style.main_body_title}>摄影</h1>
+            <div className={style.btn_box}>
+                <div className={`${style.prev} ${isPrevDown ? style.isdown : ''}`} onMouseDown={handlePrevMouseDown} onMouseUp={handleMouseUp}>
+                    &lt;
+                </div>
+                <div className={`${style.next} ${isNextDown ? style.isdown : ''}`} onMouseDown={handleNextMouseDown} onMouseUp={handleMouseUp}>
+                    &gt;
+                </div>
+            </div>
+            
             <Swiper
-                modules={[Autoplay]}
+                modules={[Autoplay,Navigation]}
+                navigation={{
+                    nextEl: `.${style.next}`,
+                    prevEl: `.${style.prev}`
+                }}
                 slidesPerView="auto"
                 spaceBetween={2}
                 loop={true}
@@ -36,7 +63,7 @@ const photograph: React.FC = () => {
                     <img src={img.src} alt={`Photography ${img.id}`} className={style.swiper_img}/>
                     </SwiperSlide>
                 ))}
-                </Swiper>
+            </Swiper>
         </>
         
     )

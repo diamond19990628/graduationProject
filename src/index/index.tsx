@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from "./index.module.css";
 import Photography from "./photography";
+import Reading from "./reading";
 const menuList:{id:number, name:string}[] = [
     {id:0, name:"摄影"},
     {id:1, name:"阅读"},
@@ -23,6 +24,7 @@ const Main:React.FC = () => {
             </div>
             <div className={style.main_body}>
                 {activeIndex === 0 && <Photography />}
+                {activeIndex === 1 && <Reading />}
             </div>
         </div>
         

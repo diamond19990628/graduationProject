@@ -1,7 +1,10 @@
 
 .main_body_title{
-    margin: 1vw 0 0 6vw !important;
+    margin: 0 0 0 6vw !important;
     font-family: "Semibold";
+    width: 6vw;
+    height: 3vw;
+    float: left;
 }
 .swiper {
   padding: 2vw 0 0 2vw;
@@ -14,4 +17,27 @@
 .swiper_img{
     width: 321px;
     height: 474px;
+    
+}
+.btn_box{
+    display: flex;
+    gap: 1vw;
+    margin: 1.3vw 0 0 1vw;
+}
+.next,.prev{
+    cursor: pointer;
+    border-radius: 999px;
+    width: 2vw;
+    height: 2vw;
+    border: 1px solid #BEBABA;
+    color: #F38D52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.isdown{
+    background-color: rgba(243,141,82,0.45);
+    box-shadow:
+    inset 0 4px 8px rgba(0,0,0,0.2),
+    inset 0 -2px 4px rgba(255,255,255,0.2);
 }

@@ -1,0 +1,76 @@
+.book{
+    display: flex;
+    flex-direction: column;
+}
+.page{
+    display: flex;
+}
+.h2{
+    font-size: 20px;
+    color: #666;
+    padding: 2vw 0 0 3vw;
+}
+.book_list{
+    display:flex;
+    gap: 2vw;
+    margin: 3vw 0 0 4vw;
+}
+.book_list2{
+    display:flex;
+    gap: 2vw;
+    margin: 3vw 0 0 12vw;
+}
+.book_img{
+    margin: 0 1vw 0 1vw;
+    cursor: pointer;
+}
+.book_img2{
+    margin: 0 2vw 0 2vw;
+    cursor: pointer;
+}
+.showComment{
+    display: flex;
+    width: 25vw;
+    height: 25vw;
+    background: linear-gradient(
+        145deg,
+        #C36027,
+        #E985FF,
+        #4A9624,
+        #85C6FF,
+        #FF6868,
+        #FFF385
+    );
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: -3vw 0 0 6vw;
+}
+.remark{
+    width:97%;
+    height: 97%;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.remark_content{
+    width: 85%;
+    height: 85%;
+}
+.remark_title{
+    color: #FF6868;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remark_text{
+    font-size: 0.8vw;
+    white-space: pre-line;
+}
+.h4{
+    font-size: 1.2vw;
+    color:#000;
+    margin: -0.4vw 0 0 -0.6vw;
+}
