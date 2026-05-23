@@ -16,7 +16,7 @@ const Other:React.FC = ()=>{
                 </div>
             </div>
             <div className={style.photoBody}>
-                <img src={IMG}/>
+                <img src={IMG} className={style.photoBody_img}/>
             </div>
         </div>
     );

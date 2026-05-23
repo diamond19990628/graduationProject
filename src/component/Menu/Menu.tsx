@@ -1,5 +1,8 @@
 import { useState } from "react";
 import style from "./Menu.module.css";
+type Props = {
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+}
 const menuList = [
   '关于我',
   '我的爱好',
@@ -8,10 +11,11 @@ const menuList = [
   '产品设计',
   '已落地项目'
 ]
-const Menu: React.FC = () => {
+const Menu: React.FC<Props> = ({setCurrentPage}) => {
   const [activeIndex, setActiveIndex] = useState(1);
   const handleMenuMove = (index : number)=>{
     setActiveIndex(index);
+    setCurrentPage(index);
   }
 
   return (
