@@ -18,7 +18,6 @@ const Sports:React.FC = ()=>{
         setList(
             list.map(item=>item.id===currentId?{...item,isShow:"true"}:item)
         );
-        console.log(list);
     }
     return(
         <>

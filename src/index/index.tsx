@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from "./index.module.css";
+import Other from "./other";
 import Photography from "./photography";
 import Reading from "./reading";
 import Sports from "./sports";
@@ -27,6 +28,7 @@ const Main:React.FC = () => {
                 {activeIndex === 0 && <Photography />}
                 {activeIndex === 1 && <Reading />}
                 {activeIndex === 2 && <Sports />}
+                {activeIndex === 3 && <Other />}
             </div>
         </div>
         

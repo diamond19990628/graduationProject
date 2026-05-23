@@ -1,0 +1,39 @@
+.otherBody{
+    gap: 2vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.otherContents{
+    height: 40%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9vw;
+    margin-top: 4vh;
+}
+.otherContentsBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+}
+.ball{
+    background-color: #F38D52;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 999px;
+    margin: 0 1.5vw 0 1.5vw;
+}
+.contents{
+    width: 60vw;
+}
+.photoBody{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
