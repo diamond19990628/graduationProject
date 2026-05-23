@@ -2,6 +2,11 @@ type Props = {
     currentId:React.Dispatch<React.SetStateAction<number>>,
 };
 import { useEffect, useRef, useState } from "react";
+import DhDesign1 from "../../assets/DhDesign1.png";
+import DhDesign2 from "../../assets/DhDesign2.png";
+import HfzDesign1 from "../../assets/HfzDesign.png";
+import HfzDesign2 from "../../assets/HfzDesign2.png";
+import HfzDesign3 from "../../assets/HfzDesign3.png";
 import Pharmacology1 from "../../assets/Illustration_desigin1.png";
 import Pharmacology2 from "../../assets/Illustration_design2.png";
 import Pharmacology3 from "../../assets/Illustration_design3.png";
@@ -9,6 +14,10 @@ import qcyjDesign1 from "../../assets/Illustration_qkyj_design1.png";
 import qcyjDesign2 from "../../assets/Illustration_qkyj_design2.png";
 import qcyjDesign3 from "../../assets/Illustration_qkyj_design3.png";
 import qcyjDesign4 from "../../assets/Illustration_qkyj_design4.png";
+import NxSheepDesign1 from "../../assets/nxsheepDesign1.png";
+import NxSheepDesign2 from "../../assets/nxsheepDesign2.png";
+import PyxDesign1 from "../../assets/PyxDesign1.png";
+import PyxDesign2 from "../../assets/PyxDesign2.png";
 import style from "./Illustration.module.css";
 const Illustration:React.FC<Props> = ({currentId})=>{
     const [currentPage,setCurrentPage] = useState(0);
@@ -69,7 +78,23 @@ const Illustration:React.FC<Props> = ({currentId})=>{
                                 {item.text}
                             </div>
                         ))}
-
+                    </div>
+                </>
+            )}
+            {currentPage==1&&(
+                <>
+                    <h1 className={style.design_h1} onClick={handleMenu}>&lt;&nbsp;&nbsp;《宁夏盐池·滩羊》品牌形象设计</h1>
+                    <div className={style.design_body}>
+                        <div className={style.sheep}>
+                            <img src={NxSheepDesign1} className={style.sheep_img}/>
+                        </div>
+                        <div className={style.sheep}>
+                            <img src={NxSheepDesign2} className={style.sheep_img}/>
+                        </div>
+                    </div>
+                    <div className={style.useToolsBody}>
+                        <div className={style.toolsBall}></div>
+                        <h3>使用工具：</h3><span>Phocreate&nbsp;+&nbsp;Illustrator</span>
                     </div>
                 </>
             )}
@@ -77,9 +102,75 @@ const Illustration:React.FC<Props> = ({currentId})=>{
                 <>
                     <h1 className={style.design_h1} onClick={handleMenu}>&lt;&nbsp;&nbsp;《江中药品》插画海报设计</h1>
                     <div className={style.design_body}>
-                        <img src={Pharmacology1}/>
-                        <img src={Pharmacology2}/>
-                        <img src={Pharmacology3}/>
+                        <div>
+                            <img src={Pharmacology1}/>
+                        </div>
+                        <div>
+                            <img src={Pharmacology2}/>
+                        </div>
+                        <div>
+                            <img src={Pharmacology3}/>
+                        </div>
+                    </div>
+                    <div className={style.useToolsBody}>
+                        <div className={style.toolsBall}></div>
+                        <h3>使用工具：</h3><span>Phocreate&nbsp;+&nbsp;Illustrator</span>
+                    </div>
+                </>
+            )}
+            {currentPage==3&&(
+                <>
+                    <h1 className={style.design_h1} onClick={handleMenu}>&lt;&nbsp;&nbsp;《皮影戏》非遗手册设计</h1>
+                    <div className={style.design_body}>
+                        <div>
+                            <img src={PyxDesign1} className={style.Pyx1}/>
+                        </div>
+                        <div>
+                            <img src={PyxDesign2} className={style.Pyx2}/>
+                        </div>
+                        
+                    </div>
+                    <div className={style.useToolsBody}>
+                        <div className={style.toolsBall}></div>
+                        <h3>使用工具：</h3><span>Adobe Illustrator</span>
+                    </div>
+                </>
+            )}
+            {currentPage==4&&(
+                <>
+                    <h1 className={style.design_h1} onClick={handleMenu}>&lt;&nbsp;&nbsp;《敦煌之旅》三折页设计</h1>
+                    <div className={style.design_body}>
+                        <div>
+                            <img src={DhDesign1} className={style.Dh1}/>
+                        </div>
+                        <div>
+                            <img src={DhDesign2} className={style.Dh2}/>
+                        </div>
+                        
+                    </div>
+                    <div className={style.useToolsBody}>
+                        <div className={style.toolsBall}></div>
+                        <h3>使用工具：</h3><span>Adobe Illustrator</span>
+                    </div>
+                </>
+            )}
+            {currentPage==5&&(
+                <>
+                    <h1 className={style.design_h1} onClick={handleMenu}>&lt;&nbsp;&nbsp;《和凤镇》VI手册设计</h1>
+                    <div className={style.design_body}>
+                        <div>
+                            <img src={HfzDesign1}/>
+                        </div>
+                        <div>
+                            <img src={HfzDesign2}/>
+                        </div>
+                        <div>
+                            <img src={HfzDesign3}/>
+                        </div>
+                    </div>
+                    <div className={style.useToolsBody}>
+                        <div className={style.toolsBall}></div>
+                        <h3>使用工具：</h3><span>Photoshop&nbsp;+&nbsp;Illustrator</span>
                     </div>
                 </>
             )}
@@ -87,10 +178,22 @@ const Illustration:React.FC<Props> = ({currentId})=>{
                 <>
                     <h1 className={style.design_h1} onClick={handleMenu}>&lt;&nbsp;&nbsp;《黔城游记》海报设计</h1>
                     <div className={style.design_body}>
-                        <img src={qcyjDesign1} className={style.QcyjImg1}/>
-                        <img src={qcyjDesign2} className={style.QcyjImg2}/>
-                        <img src={qcyjDesign3} className={style.QcyjImg3}/>
-                        <img src={qcyjDesign4} className={style.QcyjImg4}/>
+                        <div style={{width:"25%",height:"100%"}} className={style.QcyjImg1} >
+                            <img src={qcyjDesign1}/>
+                        </div>
+                        <div style={{width:"25%",height:"100%"}} className={style.QcyjImg2}>
+                            <img src={qcyjDesign2} />
+                        </div>
+                        <div style={{width:"25%",height:"100%"}} className={style.QcyjImg3}>
+                            <img src={qcyjDesign3} />
+                        </div>
+                        <div style={{width:"25%",height:"100%"}} className={style.QcyjImg4}>
+                            <img src={qcyjDesign4} />
+                        </div>
+                    </div>
+                    <div className={style.useToolsBody}>
+                        <div className={style.toolsBall}></div>
+                        <h3>使用工具：</h3><span>Photoshop&nbsp;+&nbsp;Illustrator</span>
                     </div>
                 </>
             )}

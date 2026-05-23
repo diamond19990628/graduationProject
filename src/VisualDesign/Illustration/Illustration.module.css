@@ -51,12 +51,24 @@
 }
 .design_body{
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.sheep{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sheep_img{
+    width: 70%;
+    object-fit: contain;
 }
 .QcyjImg1{
-    margin-bottom: 10vw;
+    margin-bottom: 6vw;
 }
 .QcyjImg3{
     margin-bottom: 13vw;
@@ -64,8 +76,43 @@
 .QcyjImg4{
     margin-top: 3vw;
 }
-.QcyjImg1,.QcyjImg3,.QcyjImg4,.QcyjImg2{
-    width: 66%;
-    height: 66%;
-    object-fit: contain;
+.QcyjImg1,.QcyjImg2,.QcyjImg3,.QcyjImg4{
+    display: flex;
+    align-items: center;
+}
+/* jiangzhong */
+
+.useToolsBody{
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toolsBall{
+    background-color: #F38D52;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 999px;
+    margin: 0 1.5vw 0 1.5vw;
+}
+.Pyx1{
+    margin-bottom: 3vw;
+}
+.Pyx2{
+    margin-top: 10vw;
+}
+.Dh1{
+    margin-bottom: 3vw;
+}
+.Dh2{
+    margin-top: 10vw;
+}
+.Dh1,.Dh2{
+    width: 95%;
+    height:auto;
+}
+img{
+    width: 100%;
+    height: auto;
 }
