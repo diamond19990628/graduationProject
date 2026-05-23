@@ -23,12 +23,12 @@ const Illustration:React.FC<Props> = ({currentId})=>{
     const [currentPage,setCurrentPage] = useState(0);
     const bodyRef = useRef<HTMLDivElement>(null);
     const Initballs:Array<any> = [
-        { id: 1, text: "《宁夏盐池·滩羊》", x: 300, y: 0, className:"ball1"},
-        { id: 2, text: "《江中药品》", x: 100, y: 300, className:"ball2"},
-        { id: 3, text: "《皮影戏》", x: 200, y: 600, className:"ball3"},
-        { id: 4, text: "《敦煌之旅》", x: 600, y:300, className:"ball4"},
-        { id: 5, text: "《和凤镇》", x: 800, y:0, className:"ball5"},
-        { id: 6, text: "《黔城游记》", x: 900, y:500, className:"ball6"},
+        { id: 1, text: "《宁夏盐池·滩羊》", x: 300, y: 0, className:"ball1",speed:15},
+        { id: 2, text: "《江中药品》", x: 100, y: 300, className:"ball2",speed:15},
+        { id: 3, text: "《皮影戏》", x: 200, y: 600, className:"ball3",speed:15},
+        { id: 4, text: "《敦煌之旅》", x: 600, y:300, className:"ball4",speed:15},
+        { id: 5, text: "《和凤镇》", x: 800, y:0, className:"ball5",speed:15},
+        { id: 6, text: "《黔城游记》", x: 900, y:500, className:"ball6",speed:15},
     ];
     const [balls, setBalls] = useState(Initballs);
     const BallRun = (ballID:number) => {
@@ -39,7 +39,8 @@ const Illustration:React.FC<Props> = ({currentId})=>{
             ? {
                 ...ball,
                 x:Math.random() * (width - 200),
-                y:Math.random() * (height-400)-200
+                y:Math.random() * (height-400)-200,
+                speed:10+Math.random() * 5
             }:ball
         ));
     }
@@ -72,7 +73,7 @@ const Illustration:React.FC<Props> = ({currentId})=>{
                             <div data-id={item.id} 
                                 className={style[item.className]} 
                                 onTransitionEnd={()=>BallRun(item.id)}
-                                style={{transform:`translate(${item.x}px,${item.y}px)`,transition:"transform 15s linear"}}
+                                style={{transform:`translate(${item.x}px,${item.y}px)`,transition:`transform ${item.speed}s linear`}}
                                 onClick={handleClick}
                              >
                                 {item.text}
