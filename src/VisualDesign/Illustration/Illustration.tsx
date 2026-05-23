@@ -40,7 +40,7 @@ const Illustration:React.FC<Props> = ({currentId})=>{
                 ...ball,
                 x:Math.random() * (width - 200),
                 y:Math.random() * (height-400)-200,
-                speed:10+Math.random() * 5
+                speed:5+Math.random() * 10
             }:ball
         ));
     }
