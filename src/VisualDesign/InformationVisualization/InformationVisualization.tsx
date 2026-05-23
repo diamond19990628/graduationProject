@@ -30,7 +30,7 @@ const InformationVisualzation:React.FC<Props> = ({currentId}) => {
     return(
         <>
             <div className={style.title}>
-                <h1 className={style.h1} onClick={handleReturnMenu}>&lt;&nbsp;&nbsp;&nbsp;信息可视化设计</h1>
+                <h1 className={style.h1} onClick={handleReturnMenu}>&lt;&nbsp;&nbsp;信息可视化设计</h1>
             </div>
             <div className={style.body}>
                 <div className={`${style.prev} ${currentPage===1?style.hidden:""}`} onClick={handlePrevPage}>&lt;</div>

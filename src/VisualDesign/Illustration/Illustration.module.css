@@ -1,0 +1,71 @@
+.h1{
+    width: 20vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.ball1,.ball2,.ball3,.ball4,.ball5,.ball6{
+    width: 11vw;
+    height: 11vw;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+}
+.ball1{
+    background: radial-gradient(circle,#FFFFFF,#B4F496);
+}
+.ball2{
+    background: radial-gradient(circle,#FFFFFF,#85C6FF);
+}
+.ball3{
+    background: radial-gradient(circle,#FFFFFF,#E985FF);
+}
+.ball4{
+    background: radial-gradient(circle,#FFFFFF,#FF8585);
+}
+.ball5{
+    background: radial-gradient(circle,#FFFFFF,#FFEC3D);
+}
+.ball6{
+    background: radial-gradient(circle,#FFFFFF,#F38D52);
+}
+.design_h1{
+    width: 30vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.design_body{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.QcyjImg1{
+    margin-bottom: 10vw;
+}
+.QcyjImg3{
+    margin-bottom: 13vw;
+}
+.QcyjImg4{
+    margin-top: 3vw;
+}
+.QcyjImg1,.QcyjImg3,.QcyjImg4,.QcyjImg2{
+    width: 66%;
+    height: 66%;
+    object-fit: contain;
+}

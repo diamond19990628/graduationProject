@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Illustration from "./Illustration/Illustration";
 import style from "./index.module.css";
 import InformationVisualzation from "./InformationVisualization/InformationVisualization";
 const menuList:Array<any> = [
@@ -31,6 +32,7 @@ const VisualDesign:React.FC = ()=>{
                 </>
             )}
             {currentId===1 && <InformationVisualzation currentId={setCurrentId}/>}
+            {currentId===2 && <Illustration currentId={setCurrentId}/>}
         </div>
     );
 }
