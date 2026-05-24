@@ -38,8 +38,8 @@ const Illustration:React.FC<Props> = ({currentId})=>{
         setBalls(list=>list.map(ball=>ball.id === Number(ballID)
             ? {
                 ...ball,
-                x:Math.random() * (width - 200),
-                y:Math.random() * (height-400)-200,
+                x:Math.random() * (width - 100),
+                y:Math.random() * (height-400),
                 speed:5+Math.random() * 10
             }:ball
         ));

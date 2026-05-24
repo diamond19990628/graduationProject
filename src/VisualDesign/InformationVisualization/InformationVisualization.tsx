@@ -15,6 +15,18 @@ import style from "./InformationVisualzation.module.css";
 const InformationVisualzation:React.FC<Props> = ({currentId}) => {
     const [currentPage,setCurrentPage] = useState(1);
     const totalPage = 5;
+    const [isNextDown, setNextMouseDown] = useState(false);
+    const [isPrevDown, setPrevMouseDown] = useState(false);
+    const handleNextMouseDown: React.MouseEventHandler<HTMLDivElement> = (event) => {
+        setNextMouseDown(true);
+    };
+    const handlePrevMouseDown: React.MouseEventHandler<HTMLDivElement> = (event) => {
+        setPrevMouseDown(true);
+    };
+    const handleMouseUp: React.MouseEventHandler<HTMLDivElement> = (event) => {
+        setNextMouseDown(false);
+        setPrevMouseDown(false);
+    };
     const handleReturnMenu = ()=>{
         currentId(0);
     }
@@ -33,7 +45,7 @@ const InformationVisualzation:React.FC<Props> = ({currentId}) => {
                 <h1 className={style.h1} onClick={handleReturnMenu}>&lt;&nbsp;&nbsp;信息可视化设计</h1>
             </div>
             <div className={style.body}>
-                <div className={`${style.prev} ${currentPage===1?style.hidden:""}`} onClick={handlePrevPage}>&lt;</div>
+                <div className={`${style.prev} ${currentPage===1?style.hidden:""} ${isPrevDown?style.isdown:""}`} onClick={handlePrevPage} onMouseDown={handlePrevMouseDown} onMouseUp={handleMouseUp}>&lt;</div>
                 {currentPage===1&&(
                     <>
                         <div className={style.imgBody}>
@@ -90,7 +102,7 @@ const InformationVisualzation:React.FC<Props> = ({currentId}) => {
                         </div>
                     </>
                 )}
-                <div className={`${style.next} ${currentPage===totalPage?style.hidden:""}`} onClick={handleNextPage}>&gt;</div>
+                <div className={`${style.next} ${currentPage===totalPage?style.hidden:""} ${isNextDown?style.isdown:""}`} onClick={handleNextPage} onMouseDown={handleNextMouseDown} onMouseUp={handleMouseUp}>&gt;</div>
             </div>
         </>
     );

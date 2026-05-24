@@ -1,0 +1,232 @@
+.h1{
+    width: 20vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.imgBody{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.btn{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.design_title{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ball1{
+    width: 1vw;
+    height: 1vw;
+    background-color: #4A9624;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    margin: 0 1vw 0 1vw;
+}
+.MiniPlantDesignBody{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.MiniPlantDesignBody_Alala{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+}
+.WebIndexDesignBody{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2vw;
+}
+.MiniPlantDesign1{
+    width: 24%;
+    height: 100%;
+    margin-left: 3vw;
+}
+.MiniPlantDesignImg1{
+    margin-top: -5vw;
+    overflow:visible;
+    width: 80%;
+    width: 80%;
+    object-fit: contain;
+}
+.MiniPlantDesign2{
+    width: 40%;
+    height: 100%;
+}
+.MiniPlantDesignImg2{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.MiniPlantDesign3{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.miniPlantDesign3Body{
+    width: 100%;
+    height: 33%;
+}
+.next,.prev{
+    cursor: pointer;
+    border-radius: 999px;
+    width: 2vw;
+    height: 2vw;
+    border: 1px solid #BEBABA;
+    color: #F38D52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    transform: rotate(90deg);
+    box-shadow:
+    2px 2px 5px rgba(0,0,0,0.3);
+}
+.hidden{
+    visibility: hidden;
+}
+
+.ball2{
+    width: 1vw;
+    height: 1vw;
+    background-color: #76452E;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    margin: 0 1vw 0 1vw;
+}
+.MiniPlantDesign1_Alala{
+    width: 30%;
+    height: 100%;
+    margin-left: 3vw;
+}
+.MiniPlantDesign3_Alala{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MiniPlantDesignImg1_Alala{
+    margin-top: -5vw;
+    overflow:visible;
+    width: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.MiniPlantDesign2_Alala{
+    width: 30%;
+    height: 100%;
+    margin-left: 1vw;
+}
+.MiniPlantDesignImg2{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.ball3{
+    width: 1vw;
+    height: 1vw;
+    background-color: #3B616E;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    margin: 0 1vw 0 1vw;
+}
+.ball4{
+    width: 1vw;
+    height: 1vw;
+    background-color: #DB2424;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    margin: 0 1vw 0 1vw;
+}
+.HIMDesignBody{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.HIMDesignTitle{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.HIMDesign1,.HIMDesign2{
+    width: 30%;
+    height: 100%;
+}
+.HIMDesign1{
+    margin-top: -4vw;
+}
+.MIMDesignImg1,.MIMDesignImg2{
+    width: 115%;
+    height: 115%;
+    object-fit: contain;
+}
+.ball5{
+    width: 1vw;
+    height: 1vw;
+    background: radial-gradient(circle,#FFF,#F38D52);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    margin: 0 1vw 0 1vw;
+}
+.designBody1,.designBody2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.designBody1{
+    margin-left: -4vw;
+    margin-top: 2vw;
+}
+.designBody2{
+    margin-top: 3vw;
+}
+.designImgBody1,.designImgBody2,.designImgBody3,.designImgBody4{
+    width: 50%;
+    height: 100%;
+}
+.WebDesignImg{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.isdown{
+    background-color: rgba(243,141,82,0.45);
+    box-shadow:
+    inset 0 4px 8px rgba(0,0,0,0.2),
+    inset 0 -2px 4px rgba(255,255,255,0.2);
+}

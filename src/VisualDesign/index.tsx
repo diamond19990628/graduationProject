@@ -2,6 +2,7 @@ import { useState } from "react";
 import Illustration from "./Illustration/Illustration";
 import style from "./index.module.css";
 import InformationVisualzation from "./InformationVisualization/InformationVisualization";
+import WebDesign from "./WebDesign/WebDesign";
 const menuList:Array<any> = [
     {menu_id:1,menu_name:"信息可视化设计",ballClassName:"ball1",menu_className:"menu_body_1"},
     {menu_id:2,menu_name:"海报/插画设计",ballClassName:"ball2",menu_className:"menu_body_2"},
@@ -33,6 +34,7 @@ const VisualDesign:React.FC = ()=>{
             )}
             {currentId===1 && <InformationVisualzation currentId={setCurrentId}/>}
             {currentId===2 && <Illustration currentId={setCurrentId}/>}
+            {currentId===3 && <WebDesign currentId={setCurrentId}/>}
         </div>
     );
 }

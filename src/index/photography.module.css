@@ -34,6 +34,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow:
+    2px 2px 5px rgba(0,0,0,0.3);
 }
 .isdown{
     background-color: rgba(243,141,82,0.45);
