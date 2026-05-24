@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./component/Header/Header";
 import Menu from "./component/Menu/Menu";
 import Main from "./index/index";
+import UIDesign from "./UIDesign/index";
 import VisualDesign from "./VisualDesign";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Menu setCurrentPage={setCurrentPage}/>
         {currentPage===1 && <Main/>}
         {currentPage===2 && <VisualDesign/>}
+        {currentPage===3 && <UIDesign/>}
       </div>
     </>
   );

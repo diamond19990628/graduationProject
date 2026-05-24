@@ -1,0 +1,63 @@
+.h1{
+    width: 12vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.iphoneBody{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev_body,.next_body{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.isdown{
+    background-color: rgba(243,141,82,0.45);
+    box-shadow:
+    inset 0 4px 8px rgba(0,0,0,0.2),
+    inset 0 -2px 4px rgba(255,255,255,0.2);
+}
+.next,.prev{
+    cursor: pointer;
+    border-radius: 999px;
+    width: 2vw;
+    height: 2vw;
+    border: 1px solid #BEBABA;
+    color: #F38D52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    box-shadow:
+    2px 2px 5px rgba(0,0,0,0.3);
+}
+.startLink{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hidden{
+    visibility: hidden;
+}
+.school_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.school{
+    font-size: 1.5vw;
+}
