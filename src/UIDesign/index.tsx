@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from "./index.module.css";
 import Iphone from "./Iphone/Iphone";
+import Web from "./Web/Web";
 const UIDesignIndex:React.FC = () => {
     const [currentPage,setCurrentPage] = useState(0);
     const handlePageChange = (event:React.MouseEvent) => {
@@ -26,6 +27,11 @@ const UIDesignIndex:React.FC = () => {
             {currentPage===1&&(
                 <>
                     <Iphone setCurrentPage={setCurrentPage}/>
+                </>
+            )}
+            {currentPage===2&&(
+                <>
+                    <Web setCurrentPage={setCurrentPage}/>
                 </>
             )}
         </div>
