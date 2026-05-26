@@ -17,15 +17,18 @@
 }
 .ul{
     list-style: none;
-    display: flex;   
+    display: flex;
+    margin-top: 1vw;
 }
 .li{
-    width: 20%;
+    min-width: 0%;
     height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: 1.5vw;
+    padding: 0 0.5vw 0 0.5vw;
 }
 .body{
     width: 100%;
