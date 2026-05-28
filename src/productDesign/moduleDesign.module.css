@@ -1,0 +1,30 @@
+.img1_body{
+    width: 28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img2_body{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img1{
+    width: 95%;
+    height: auto;
+}
+.img2{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.img2_2_body{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
