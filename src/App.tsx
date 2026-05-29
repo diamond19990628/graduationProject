@@ -1,4 +1,5 @@
 import { useState } from "react";
+import StartDialog from "./component/common/startDialog";
 import Header from "./component/Header/Header";
 import Menu from "./component/Menu/Menu";
 import Main from "./index/index";
@@ -11,8 +12,12 @@ import VisualDesign from "./VisualDesign";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [DialogState,setDialogState] = useState(true);
   if (currentPage === 6) {
     return <Detail setAppPage={setCurrentPage}/>;
+  }
+  if(DialogState){
+    return <StartDialog setDialogState={setDialogState}/>
   }
   return (
     <>
