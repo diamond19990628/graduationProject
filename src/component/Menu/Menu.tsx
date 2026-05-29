@@ -1,7 +1,7 @@
-import { useState } from "react";
 import style from "./Menu.module.css";
 type Props = {
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>,
+  currentPage:number
 }
 const menuList = [
   '关于我',
@@ -11,10 +11,8 @@ const menuList = [
   '产品设计',
   '已落地项目'
 ]
-const Menu: React.FC<Props> = ({setCurrentPage}) => {
-  const [activeIndex, setActiveIndex] = useState(1);
+const Menu: React.FC<Props> = ({setCurrentPage,currentPage}) => {
   const handleMenuMove = (index : number)=>{
-    setActiveIndex(index);
     setCurrentPage(index);
   }
 
@@ -24,7 +22,7 @@ const Menu: React.FC<Props> = ({setCurrentPage}) => {
       <h1 className={style.subtitle}>简介</h1>
       <ul className={style.ul}>
         {menuList.map((item,index) => (
-          <li className={`${style.li} ${index === activeIndex ? style.mouseClick : ''}`} key={index} onClick={() => handleMenuMove(index)}>
+          <li className={`${style.li} ${index === currentPage ? style.mouseClick : ''}`} key={index} onClick={() => handleMenuMove(index)}>
             {item}
           </li>
         ))}
