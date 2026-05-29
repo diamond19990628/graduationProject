@@ -10,7 +10,7 @@ import UIDesign from "./UIDesign/index";
 import VisualDesign from "./VisualDesign";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   if (currentPage === 6) {
     return <Detail setAppPage={setCurrentPage}/>;
   }
