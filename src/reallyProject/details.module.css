@@ -17,7 +17,7 @@
 }
 .detailBody{
     width: 90%;
-    height: 90vh;
+    height: 50vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,4 +32,6 @@
 .img{
     width: 80%;
     height: auto;
+    object-fit: contain;
+    overflow: hidden;
 }
