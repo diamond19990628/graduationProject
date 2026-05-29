@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./component/Header/Header";
 import Menu from "./component/Menu/Menu";
 import Main from "./index/index";
+import Mypage from "./mypage/index";
 import ProductDesign from "./productDesign/index";
 import Detail from "./reallyProject/details";
 import ReallyProject from "./reallyProject/index";
@@ -18,6 +19,7 @@ const App = () => {
       <Header />
       <div style={{ display: "flex" }}>
         <Menu setCurrentPage={setCurrentPage} currentPage={currentPage}/>
+        {currentPage===0 && <Mypage/>}
         {currentPage===1 && <Main/>}
         {currentPage===2 && <VisualDesign/>}
         {currentPage===3 && <UIDesign/>}

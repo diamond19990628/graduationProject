@@ -1,0 +1,195 @@
+.main{
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+.top{
+    width: 100%;
+    height: 48vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.down{
+    width: 90%;
+    height: 28vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 1px;
+}
+.top_left{
+    width: 40%;
+    height: 100%;
+}
+.top_right{
+    width: 50%;
+    height: 80%;
+}
+.title1{
+    width: fit-content;
+    height: 2rem;
+    text-align: center;
+}
+.title2{
+    width: fit-content;
+    height: 2rem;
+    text-align: center;
+    margin-left: 5rem;
+}
+.myinfo{
+    width: 80%;
+    height: 12vw;
+    border-radius: 20px;
+    border: 1px solid rgba(0,  0, 0, 0.2);
+    box-shadow: 1px 2px 1px rgba(0,  0, 0, 0.2);
+    display: flex;
+    margin-left: 3vw;
+}
+.myinfo_left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.myinfo_right{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1vw;
+}
+.myPhoto{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.myName{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+}
+.img{
+    width: 80%;
+    height: auto;
+}
+.p{
+    font-size: 1vw;
+    width: 5rem;
+    height: 1rem;
+    margin-bottom: -10px;
+    text-align: center;
+    font-weight: bolder;
+}
+.p2{
+    width: fit-content;
+    height: 2rem;
+    font-size: 1vw;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-bottom: -10px;
+}
+.basicInfo{
+    width: 100%;
+    height: 15vh+100px;
+    border-bottom: 1px solid #BEBABA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skillsInfo{
+    width: 100%;
+    height: 10vh+100px;
+    border-bottom: 1px solid #BEBABA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.ball{
+    width: 1.2vw;
+    height: 1.2vw;
+    background-color: #F38D52;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+}
+.title3{
+    width: fit-content;
+    height: 3rem;
+    margin-left: 1%;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detail{
+    width: 90%;
+    height: 50%;
+    margin: 2% 0 0 3%;
+}
+.detail2{
+    width: 90%;
+    height: 50%;
+    margin: 2% 0 0 3%;
+}
+.p3{
+    font-size: 1.1vw;
+    font-weight: 700;
+    margin: 0 0 1vw 0;
+}
+.span{
+    font-size: 1vw;
+    font-weight: 100;
+    margin: 0 0 0 0;
+}
+.myIdea{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_idea{
+    width: 10%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.ideaContents{
+    width: 60%;
+    height: 80%;
+    background-color: rgb(243, 141, 82,0.38);
+    clip-path: polygon(
+        80px 0,
+        100% 0,
+        100% 100%,
+        80px 100%,
+        0 50%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
