@@ -6,6 +6,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    
 }
 .body{
     width: 100%;
@@ -24,6 +28,9 @@
     justify-content: center;
     flex-direction: column;
     color: aliceblue;
+    white-space: nowrap;
+    overflow: hidden;
+    mix-blend-mode: destination-out;
 }
 .p{
     font-size: 3vw;
@@ -61,6 +68,7 @@ $duration:400s;
         position: fixed;
         box-shadow: star(100); 
         animation: moveUp #{$duration} linear infinite;
+        z-index: 9999;
     }
     .layer#{$j}::after{
         content: "";
@@ -75,9 +83,29 @@ $duration:400s;
         top: 100vh;
     }
 }
-
+:global{
+    @keyframes start {
+        to{
+            transform: scale(80);
+            opacity: 0;
+        }
+    }
+    @keyframes changeToWhite {
+        to{
+            opacity: 0;
+        }
+    }
+}
 @keyframes moveUp {
     to{
         transform: translateY(-100vh);
     }
+}
+
+.startMain {
+  animation: changeToWhite 6s linear forwards;
+}
+
+.startTitle {
+  animation: start 6s linear forwards;
 }

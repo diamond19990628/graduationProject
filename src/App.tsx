@@ -16,9 +16,6 @@ const App = () => {
   if (currentPage === 6) {
     return <Detail setAppPage={setCurrentPage}/>;
   }
-  if(DialogState){
-    return <StartDialog setDialogState={setDialogState}/>
-  }
   return (
     <>
       <Header />
@@ -31,6 +28,7 @@ const App = () => {
         {currentPage===4 && <ProductDesign/>}
         {currentPage===5 && <ReallyProject setAppPage={setCurrentPage}/>}
       </div>
+      {DialogState && (<StartDialog setDialogState={setDialogState}/>)}
     </>
   );
 };
