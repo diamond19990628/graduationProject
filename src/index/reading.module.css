@@ -31,11 +31,10 @@
 .showComment{
     display: flex;
     width: 25vw;
-    height: 25vw;
+    min-height: 55vh;
     border-radius: 30px;
     justify-content: center;
     align-items: center;
-    margin: -3vw 0 0 6vw;
 }
 .remark{
     width:97%;
@@ -47,7 +46,7 @@
 }
 .remark_content{
     width: 85%;
-    height: 85%;
+    min-height: 85%;
 }
 .remark_title{
     color: #FF6868;
@@ -55,15 +54,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 4%;
 }
 .remark_text{
-    font-size: 0.8vw;
+    font-size: 0.9rem;
     white-space: pre-line;
+    max-height: 60vh;
 }
 .h4{
     font-size: 1.2vw;
     color:#000;
-    margin: -0.4vw 0 0 -0.6vw;
+    margin: 1.2vw 0 1.2vw 0;
     font-weight: 100;
     font-family: "Regular";
 }

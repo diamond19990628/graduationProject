@@ -1,6 +1,6 @@
 .section{
     width: 20vw;
-    height: 100vh;
+    min-height: 92vh;
     border-right: 1px solid #BEBABA;
     display: flex;
     flex-direction: column;

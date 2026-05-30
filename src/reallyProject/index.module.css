@@ -1,7 +1,7 @@
 .main{
     flex: 1;
     min-width: 0;
-    height: 100vh;
+    min-height: 92vh;
 }
 .pageTitle {
   margin-left: 6%;

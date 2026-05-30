@@ -2,6 +2,7 @@ import { useState } from "react";
 import Myphoto from "../../assets/img/Myphoto.png";
 import StatePhoto from "../../assets/img/state.png";
 import style from "./Header.module.css";
+import MyInfoDialog from "./myInfoDialog";
 const Header: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const handleOpenMyInfo: React.MouseEventHandler<HTMLImageElement> = ()=>{
@@ -23,6 +24,7 @@ const Header: React.FC = () => {
         </div>
         <img src={Myphoto} alt="My Photo" className={style.Myphoto}/>
       </div>
+      <MyInfoDialog isOpen={isHovered}/>
     </header>
   )
 }

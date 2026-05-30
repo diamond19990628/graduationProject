@@ -60,7 +60,7 @@ const Reading: React.FC = () => {
                 <div className={`${style.showComment}`} style={{background:title===""?"linear-gradient(145deg,#C36027,#E985FF,#4A9624,#85C6FF,#FF6868,#FFF385)":currentColor}}>
                     <div className={style.remark}>
                         <div className={style.remark_content}>
-                            <h3 className={style.remark_title}>{title===""?"":`《${title}》`}</h3>
+                            <h3 className={style.remark_title} style={{color:`${currentColor}`}}>{title===""?"":`《${title}》`}</h3>
                             <h4 className={style.h4}>{title===""?"":`我的感受`}</h4>
                             <p className={style.remark_text}>{comment}</p>
                         </div>

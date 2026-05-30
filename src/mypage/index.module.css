@@ -12,7 +12,7 @@
 }
 .down{
     width: 90%;
-    height: 28vh;
+    min-height: 28vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +42,7 @@
 .myinfo{
     width: 80%;
     height: 12vw;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid rgba(0,  0, 0, 0.2);
     box-shadow: 1px 2px 1px rgba(0,  0, 0, 0.2);
     display: flex;
