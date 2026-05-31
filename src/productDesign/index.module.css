@@ -20,16 +20,18 @@
     list-style: none;
     display: flex;
     margin-top: 1vw;
+    margin-left: 3vw;
+    min-height: 6vh;
 }
 .li{
-    min-width: 0%;
+    min-width: 3%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 1.5vw;
-    padding: 0 0.5vw 0 0.5vw;
+    font-size: 1.4vw;
+    padding: 0 1vw 0 1vw;
 }
 .body{
     width: 100%;

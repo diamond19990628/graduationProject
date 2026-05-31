@@ -30,12 +30,12 @@
 }
 .title1{
     width: fit-content;
-    height: 2rem;
+    min-height: 2rem;
     text-align: center;
 }
 .title2{
     width: fit-content;
-    height: 2rem;
+    min-height: 2rem;
     text-align: center;
     margin-left: 5rem;
 }
@@ -78,27 +78,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 2vh;
 }
 .img{
     width: 80%;
     height: auto;
 }
 .p{
-    font-size: 1vw;
+    font-size: 1.2vw;
     width: 5rem;
-    height: 1rem;
+    min-height: 1rem;
     text-align: center;
     font-weight: bolder;
 }
 .p2{
     width: fit-content;
-    height: 2rem;
+    height: 3.5rem;
     font-size: 1vw;
     font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #D9D9D9;
 }
 .basicInfo{
     width: 100%;
@@ -152,7 +153,7 @@
 .p3{
     font-size: 1.1vw;
     font-weight: 700;
-    margin: 0 0 1vw 0;
+    margin: 0 0 2.6vh 0;
 }
 .span{
     font-size: 1vw;
