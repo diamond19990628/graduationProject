@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2vw;
 }
 .h3{
     font-weight: 100;
@@ -27,7 +28,8 @@
 }
 .imgBody{
     position: relative;
-    width: 100%;
+    flex: 1;
+    min-width: 0;
     height: 100%;
     margin-top: -3vw;
 }
@@ -37,7 +39,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 2vw auto;
     gap: 5vw;
 }
 
@@ -78,6 +80,7 @@
     display: flex;
     width: 80%;
     height: 50%;
+    margin-top: 2vw;
 }
 .mini2_body{
     display: flex;
@@ -90,6 +93,14 @@
     max-height: 85%;
     object-fit: contain;
 }
+.prev{
+    justify-self: center;
+}
+
+.next{
+    justify-self: center;
+}
+
 @media (max-width: 500px) {
     .h1{
         width: auto;
