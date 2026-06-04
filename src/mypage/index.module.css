@@ -287,21 +287,21 @@
        min-height: auto !important;
     }
     .myIdea{
-        width: 100%;
+        width: 80vw;
         height: 4vh !important;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .ideaContents{
-        width: 30%;
+        width: 80%;
         height: 80%;
         background-color: rgb(243, 141, 82,0.38);
         clip-path: polygon(
-            200px 0,
+            10px 0,
             100% 0,
             100% 100%,
-            200px 100%,
+            10px 100%,
             0 50%
         );
         display: flex;

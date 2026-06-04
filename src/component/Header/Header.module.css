@@ -68,16 +68,16 @@
 
     .span{
         color:#000;
-        font-size: 20px;
+        font-size: 10px;
         white-space: nowrap;
-        margin-left: 40%;
+        margin-left: auto;
     }
 
     .button{
         margin-left: auto;
         margin-right: 2%;
-        width: 90px;
-        height: 40px;
+        width: 15vw;
+        height: 5vh;
         flex-shrink: 0;
 
         border-radius: 999px;
@@ -88,18 +88,18 @@
         align-items: center;
     }
     .Myphoto{
-        width: 40% !important;
+        width: 30% !important;
         height: auto;
         margin-right: 7%;
         border-radius: 999px;
     }
     .StatePhoto{
-        width: 40% !important;
+        width: 30% !important;
         height: auto;
     }
 }
 @media (max-width: 500px) {
     .span{
-        margin-left: 4vw;
+        margin-left: 1vw;
     }
 }
