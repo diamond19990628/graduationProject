@@ -1,10 +1,16 @@
 
+.main_body_header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+}
 .main_body_title{
-    margin: 0 0 0 6vw !important;
+    margin: 0 2vw 0 6vw !important;
     font-family: "Semibold";
-    width: 6vw;
-    height: 3vw;
-    float: left;
+    width: fit-content;
+    height: 100%;
 }
 .swiper {
   padding: 2vw 0 0 2vw;
@@ -20,9 +26,10 @@
     
 }
 .btn_box{
+    height: 100%;
     display: flex;
     gap: 1vw;
-    margin: 1.3vw 0 0 1vw;
+    width: 60%;
 }
 .next,.prev{
     cursor: pointer;

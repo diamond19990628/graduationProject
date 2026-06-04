@@ -33,16 +33,17 @@ const photograph: React.FC = () => {
 
     return (
         <>
-            <h1 className={style.main_body_title}>摄影</h1>
-            <div className={style.btn_box}>
-                <div className={`${style.prev} ${isPrevDown ? style.isdown : ''}`} onMouseDown={handlePrevMouseDown} onMouseUp={handleMouseUp}>
-                    &lt;
-                </div>
-                <div className={`${style.next} ${isNextDown ? style.isdown : ''}`} onMouseDown={handleNextMouseDown} onMouseUp={handleMouseUp}>
-                    &gt;
+            <div className={style.main_body_header}>
+                <h1 className={style.main_body_title}>摄影</h1>
+                <div className={style.btn_box}>
+                    <div className={`${style.prev} ${isPrevDown ? style.isdown : ''}`} onMouseDown={handlePrevMouseDown} onMouseUp={handleMouseUp}>
+                        &lt;
+                    </div>
+                    <div className={`${style.next} ${isNextDown ? style.isdown : ''}`} onMouseDown={handleNextMouseDown} onMouseUp={handleMouseUp}>
+                        &gt;
+                    </div>
                 </div>
             </div>
-            
             <Swiper
                 modules={[Autoplay,Navigation]}
                 navigation={{

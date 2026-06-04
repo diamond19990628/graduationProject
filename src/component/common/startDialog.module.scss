@@ -46,7 +46,18 @@
     justify-content: center;
     cursor: pointer;
 }
-
+@media (max-width: 500px) {
+    .btn{
+        width: fit-content;
+        height: auto;
+        padding: 10px 10px;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
 /* 星空动画 */
 @function star($n){
     $result:'#{random(100)}vw #{random(100)}vh #fff';

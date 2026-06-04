@@ -1,6 +1,8 @@
 .book{
     display: flex;
     flex-direction: column;
+    max-width: 70%;
+    height: 100%;
 }
 .page{
     display: flex;
@@ -12,11 +14,13 @@
 }
 .book_list{
     display:flex;
+    flex-wrap: wrap;
     gap: 2vw;
     margin: 3vw 0 0 4vw;
 }
 .book_list2{
     display:flex;
+    flex-wrap: wrap;
     gap: 2vw;
     margin: 3vw 0 0 12vw;
 }
@@ -67,4 +71,42 @@
     margin: 1.2vw 0 1.2vw 0;
     font-weight: 100;
     font-family: "Regular";
+}
+@media (max-width: 500px) {
+    .page{
+        flex-direction: column;
+    }
+    .h2{
+        font-size: 6vw;
+    }
+    .h4{
+        font-size: 4vw;
+    }
+    .book_list2{
+        display:flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+        margin: 3vw 0 0 4vw;
+    }
+    .showComment{
+        width: 80vw;
+        height: 40vh;
+    }
+    .remark_content{
+        width: 85%;
+        min-height: 85%;
+    }
+    .remark_title{
+        color: #FF6868;
+        font-size: 6vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4%;
+    }
+    .remark_text{
+        font-size: 0.9rem;
+        white-space: pre-line;
+        max-height: 60vh;
+    }
 }
