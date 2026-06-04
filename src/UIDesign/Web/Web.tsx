@@ -23,7 +23,7 @@ const Iphone:React.FC<Props> = ({setCurrentPage}) => {
         setCurrentPageID(currentPageID-1);
     }
     return(
-        <>
+        <div className={style.webPage}>
             <h1 className={style.h1} onClick={handleReturn}>&lt;&nbsp;&nbsp;网页端</h1>
             <div className={style.iphoneBody}>
                 <div className={style.prev_body}>
@@ -32,7 +32,7 @@ const Iphone:React.FC<Props> = ({setCurrentPage}) => {
                     </div>
                 </div>
                 <div className={style.startLink}>
-                    <h2>{WebList.find(item=>item.page_id===currentPageID)?.name || ""}</h2>
+                    <h2 className={style.videoTitle}>{WebList.find(item=>item.page_id===currentPageID)?.name || ""}</h2>
                     <video key={WebList.find(item=>item.page_id===currentPageID)?.page_id} className={style.videoBody} src={
                         WebList.find(item=>item.page_id===currentPageID)?.src || ""
                     } controls/>
@@ -43,7 +43,7 @@ const Iphone:React.FC<Props> = ({setCurrentPage}) => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 export default Iphone;

@@ -19,27 +19,119 @@ import NxSheepDesign2 from "../../assets/nxsheepDesign2.png";
 import PyxDesign1 from "../../assets/PyxDesign1.png";
 import PyxDesign2 from "../../assets/PyxDesign2.png";
 import style from "./Illustration.module.css";
+
+const MOBILE_BREAKPOINT = 500;
+
+type BallItem = {
+    id: number;
+    text: string;
+    className: string;
+    x: number;
+    y: number;
+    speed: number;
+};
+
+const BALL_DEFS = [
+    { id: 1, text: "《宁夏盐池·滩羊》", className: "ball1" },
+    { id: 2, text: "《江中药品》", className: "ball2" },
+    { id: 3, text: "《皮影戏》", className: "ball3" },
+    { id: 4, text: "《敦煌之旅》", className: "ball4" },
+    { id: 5, text: "《和凤镇》", className: "ball5" },
+    { id: 6, text: "《黔城游记》", className: "ball6" },
+];
+
+const getMoveRange = (
+    containerWidth: number,
+    containerHeight: number,
+    ballWidth?: number,
+    ballHeight?: number
+) => {
+    const isMobile = containerWidth <= MOBILE_BREAKPOINT;
+    const sizeW = ballWidth ?? (isMobile ? containerWidth * 0.28 : containerWidth * 0.11);
+    const sizeH = ballHeight ?? sizeW;
+    return {
+        maxX: Math.max(0, containerWidth - sizeW),
+        maxY: Math.max(0, containerHeight - sizeH),
+    };
+};
+
+const createBallsInRange = (
+    containerWidth: number,
+    containerHeight: number,
+    ballWidth?: number,
+    ballHeight?: number
+): BallItem[] => {
+    const { maxX, maxY } = getMoveRange(
+        containerWidth,
+        containerHeight,
+        ballWidth,
+        ballHeight
+    );
+    return BALL_DEFS.map((def) => ({
+        ...def,
+        x: Math.random() * maxX,
+        y: Math.random() * maxY,
+        speed: 15,
+    }));
+};
+
+const getFallbackContainerSize = () => {
+    const isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
+    return {
+        width: window.innerWidth,
+        height: isMobile ? window.innerHeight * 0.7 : window.innerHeight * 0.8,
+    };
+};
+
 const Illustration:React.FC<Props> = ({currentId})=>{
     const [currentPage,setCurrentPage] = useState(0);
     const bodyRef = useRef<HTMLDivElement>(null);
-    const Initballs:Array<any> = [
-        { id: 1, text: "《宁夏盐池·滩羊》", x: 300, y: 0, className:"ball1",speed:15},
-        { id: 2, text: "《江中药品》", x: 100, y: 300, className:"ball2",speed:15},
-        { id: 3, text: "《皮影戏》", x: 200, y: 600, className:"ball3",speed:15},
-        { id: 4, text: "《敦煌之旅》", x: 600, y:300, className:"ball4",speed:15},
-        { id: 5, text: "《和凤镇》", x: 800, y:0, className:"ball5",speed:15},
-        { id: 6, text: "《黔城游记》", x: 900, y:500, className:"ball6",speed:15},
-    ];
-    const [balls, setBalls] = useState(Initballs);
+    const [balls, setBalls] = useState<BallItem[]>(() => {
+        const { width, height } = getFallbackContainerSize();
+        return createBallsInRange(width, height);
+    });
+    const layoutAllBalls = (randomizeSpeed = false) => {
+        if (!bodyRef.current) return;
+        const container = bodyRef.current;
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        const sampleBall = container.querySelector<HTMLElement>("[data-id]");
+        const ballWidth = sampleBall?.offsetWidth;
+        const ballHeight = sampleBall?.offsetHeight;
+        const { maxX, maxY } = getMoveRange(
+            width,
+            height,
+            ballWidth,
+            ballHeight
+        );
+        setBalls((list) =>
+            list.map((ball) => ({
+                ...ball,
+                x: Math.random() * maxX,
+                y: Math.random() * maxY,
+                speed: randomizeSpeed ? 5 + Math.random() * 10 : ball.speed,
+            }))
+        );
+    };
     const BallRun = (ballID:number) => {
         if (!bodyRef.current) return;
-        const width = bodyRef.current.clientWidth;
-        const height = bodyRef.current.clientHeight;
+        const container = bodyRef.current;
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        const sampleBall = container.querySelector<HTMLElement>("[data-id]");
+        const ballWidth = sampleBall?.offsetWidth;
+        const ballHeight = sampleBall?.offsetHeight;
+        const { maxX, maxY } = getMoveRange(
+            width,
+            height,
+            ballWidth,
+            ballHeight
+        );
         setBalls(list=>list.map(ball=>ball.id === Number(ballID)
             ? {
                 ...ball,
-                x:Math.random() * (width - 100),
-                y:Math.random() * (height-400),
+                x:Math.random() * maxX,
+                y:Math.random() * maxY,
                 speed:5+Math.random() * 10
             }:ball
         ));
@@ -50,12 +142,13 @@ const Illustration:React.FC<Props> = ({currentId})=>{
     }
     useEffect(()=>{
         if (currentPage !== 0) return;
-        const timer = setTimeout(()=>{
-            Initballs.map(ball=>{
-                BallRun(ball.id);
-            });
-        },50)
-        return () => clearTimeout(timer);
+        const timer = setTimeout(() => layoutAllBalls(false), 50);
+        const handleResize = () => layoutAllBalls(false);
+        window.addEventListener("resize", handleResize);
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener("resize", handleResize);
+        };
     },[currentPage])
     const handleReturn = ()=>{
         currentId(0);
@@ -179,16 +272,16 @@ const Illustration:React.FC<Props> = ({currentId})=>{
                 <>
                     <h1 className={style.design_h1} onClick={handleMenu}>&lt;&nbsp;&nbsp;《黔城游记》海报设计</h1>
                     <div className={style.design_body}>
-                        <div style={{width:"25%",height:"100%"}} className={style.QcyjImg1} >
+                        <div className={style.QcyjImg1}>
                             <img src={qcyjDesign1}/>
                         </div>
-                        <div style={{width:"25%",height:"100%"}} className={style.QcyjImg2}>
+                        <div className={style.QcyjImg2}>
                             <img src={qcyjDesign2} />
                         </div>
-                        <div style={{width:"25%",height:"100%"}} className={style.QcyjImg3}>
+                        <div className={style.QcyjImg3}>
                             <img src={qcyjDesign3} />
                         </div>
-                        <div style={{width:"25%",height:"100%"}} className={style.QcyjImg4}>
+                        <div className={style.QcyjImg4}>
                             <img src={qcyjDesign4} />
                         </div>
                     </div>

@@ -1,3 +1,6 @@
+.webPage{
+    width: 100%;
+}
 .h1{
     width: 12vw;
     height: 4vw;
@@ -6,6 +9,9 @@
     justify-content: center;
     font-size: 1.5vw;
     cursor: pointer;
+}
+.videoTitle{
+    margin: 0;
 }
 .iphoneBody{
     width: 100%;
@@ -34,9 +40,12 @@
     height: 2vw;
     border: 1px solid #BEBABA;
     color: #F38D52;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2vw;
     margin-left: 1vw;
     box-shadow:
     2px 2px 5px rgba(0,0,0,0.3);
@@ -54,4 +63,85 @@
 .videoBody{
     width: 95%;
     height: 95%;
+}
+@media (max-width: 500px) {
+    .webPage{
+        min-height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 2vw;
+    }
+    .h1{
+        width: auto;
+        height: auto;
+        font-size: 4vw;
+        justify-content: center;
+        align-self: center;
+        margin: 0 0 3vw;
+    }
+    .iphoneBody{
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .prev_body,
+    .next_body{
+        width: auto;
+        height: auto;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+    }
+    .startLink{
+        flex: 1;
+        min-width: 0;
+        max-width: calc(100% - 24vw);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .videoTitle{
+        font-size: 4vw;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.4;
+        margin-bottom: 2vw;
+        padding: 0 1vw;
+    }
+    .videoBody{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 45vh;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+    .next,
+    .prev{
+        width: 10vw;
+        height: 10vw;
+        min-width: 10vw;
+        min-height: 10vw;
+        font-size: 5vw;
+        margin-left: 0;
+        flex-shrink: 0;
+        background-color: #fff;
+        align-self: center;
+    }
 }

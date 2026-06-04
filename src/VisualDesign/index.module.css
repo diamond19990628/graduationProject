@@ -68,3 +68,30 @@
     display: flex;
     align-items: center;
 }
+@media (max-width: 500px) {
+    .title1{
+        font-size: 6vw;
+    }
+    .title2{
+        font-size: 4vw;
+    }
+    .menu_body_1,
+    .menu_body_2,
+    .menu_body_3{
+        margin: 5vw 0 0 8vw;
+    }
+    .menu_li{
+        width: auto;
+        height: auto;
+        font-size: 4vw;
+        padding-bottom: 1vw;
+        white-space: nowrap;
+    }
+    .ball1,
+    .ball2,
+    .ball3{
+        width: 3vw;
+        height: 3vw;
+        flex-shrink: 0;
+    }
+}

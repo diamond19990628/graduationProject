@@ -84,12 +84,71 @@
     height: 2vw;
     border: 1px solid #BEBABA;
     color: #F38D52;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2vw;
     box-shadow:
     2px 2px 5px rgba(0,0,0,0.3);
 }
 .hidden{
     visibility: hidden;
+}
+@media (max-width: 500px) {
+    .projectBody{
+        gap: 2vw;
+        padding: 0 1vw;
+        box-sizing: border-box;
+    }
+    .prevBody,
+    .nextBody{
+        width: auto;
+        flex-shrink: 0;
+    }
+    .projectContent{
+        flex: 1;
+        min-width: 0;
+        max-width: calc(100% - 24vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .next,
+    .prev{
+        width: 10vw;
+        height: 10vw;
+        min-width: 10vw;
+        min-height: 10vw;
+        font-size: 5vw;
+        flex-shrink: 0;
+        background-color: #fff;
+    }
+    .projectName {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 60px;
+    }
+    .qrBox {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .qrBox2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .left{
+        width: 98%;
+        height: auto;
+    }
+    .right{
+        width: 100%;
+        height: auto;
+        margin-left: 2%;
+    }
 }

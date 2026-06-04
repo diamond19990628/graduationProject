@@ -76,9 +76,19 @@
 .QcyjImg4{
     margin-top: 3vw;
 }
-.QcyjImg1,.QcyjImg2,.QcyjImg3,.QcyjImg4{
+.QcyjImg1,
+.QcyjImg2,
+.QcyjImg3,
+.QcyjImg4{
     display: flex;
     align-items: center;
+    width: 25%;
+    height: 100%;
+}
+.design_body > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* jiangzhong */
 
@@ -115,4 +125,76 @@
 img{
     width: 100%;
     height: auto;
+}
+@media (max-width: 500px) {
+    .h1{
+        width: auto;
+        height: auto;
+        font-size: 4vw;
+        justify-content: flex-start;
+        margin-left: 2vw;
+    }
+    .body{
+        height: 70vh;
+        min-height: 70vh;
+    }
+    .ball1,
+    .ball2,
+    .ball3,
+    .ball4,
+    .ball5,
+    .ball6{
+        width: 28vw;
+        height: 28vw;
+        font-size: 3vw;
+        white-space: nowrap;
+        padding: 0 2vw;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .design_h1{
+        width: auto;
+        height: auto;
+        font-size: 3.5vw;
+        justify-content: flex-start;
+        margin-left: 2vw;
+        padding-right: 2vw;
+    }
+    .design_body{
+        flex-direction: column;
+        height: auto;
+        gap: 4vw;
+        padding: 2vw 4vw;
+        box-sizing: border-box;
+    }
+    .design_body > div,
+    .sheep,
+    .QcyjImg1,
+    .QcyjImg2,
+    .QcyjImg3,
+    .QcyjImg4{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .sheep_img{
+        width: 100%;
+    }
+    .Pyx1,
+    .Pyx2,
+    .Dh1,
+    .Dh2{
+        width: 100%;
+        margin: 0;
+    }
+    .useToolsBody{
+        height: auto;
+        padding: 3vw 0;
+        font-size: 3.5vw;
+        flex-wrap: wrap;
+    }
+    .toolsBall{
+        width: 2.5vw;
+        height: 2.5vw;
+    }
 }

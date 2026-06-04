@@ -3,13 +3,21 @@ import Dialog, { DialogProps } from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import * as React from 'react';
+
+const MOBILE_BREAKPOINT = '(max-width:500px)';
 type Props = {
     AppName:string,
     src:string,
     font_size?:number
 }
 export default function ScrollDialog({AppName,src,font_size}:Props) {
+  const isMobile = useMediaQuery(MOBILE_BREAKPOINT);
+  const desktopSize = font_size ?? 1.5;
+  const titleFontSize = isMobile
+    ? `${Math.max(desktopSize * 2.67, 4)}vw`
+    : `${desktopSize}vw`;
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper');
 
@@ -34,7 +42,20 @@ export default function ScrollDialog({AppName,src,font_size}:Props) {
 
   return (
     <React.Fragment>
-      <Button onClick={handleClickOpen('paper')} sx={{color:"black",fontSize:`${font_size===undefined?"1.5":font_size}vw`,fontWeight:"bolder",fontFamily:"Semibold"}}>{AppName}</Button>
+      <Button
+        onClick={handleClickOpen('paper')}
+        sx={{
+          color: "black",
+          fontSize: titleFontSize,
+          fontWeight: "bolder",
+          fontFamily: "Semibold",
+          textTransform: "none",
+          lineHeight: 1.4,
+          py: isMobile ? 1 : 0.5,
+        }}
+      >
+        {AppName}
+      </Button>
       <Dialog
         open={open}
         onClose={handleClose}

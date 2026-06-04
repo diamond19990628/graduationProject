@@ -41,3 +41,42 @@
     width: 75%;
     height: 80%;
 }
+@media (max-width: 500px) {
+    .otherBody{
+        height: auto;
+        justify-content: flex-start;
+        padding-bottom: 4vw;
+    }
+    .otherContents{
+        height: auto;
+        font-size: 4vw;
+        width: 90%;
+        margin-top: 2vh;
+    }
+    .otherContentsBody{
+        height: auto;
+        align-items: flex-start;
+        margin-top: 2vh;
+    }
+    .contents{
+        width: auto;
+        flex: 1;
+        line-height: 1.6;
+        font-size: 4vw;
+    }
+    .ball{
+        width: 2.5vw;
+        height: 2.5vw;
+        flex-shrink: 0;
+        margin-top: 1vw;
+    }
+    .photoBody{
+        height: auto;
+        width: 90%;
+        margin-top: 8vw;
+    }
+    .photoBody_img{
+        width: 85%;
+        height: auto;
+    }
+}
