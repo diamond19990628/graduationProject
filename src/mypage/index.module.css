@@ -26,18 +26,22 @@
 }
 .top_right{
     width: 50%;
-    height: 80%;
+    height: 100%;
+    margin-top: 6vh;
 }
 .title1{
     width: fit-content;
-    min-height: 2rem;
+    font-size: clamp(16px, 3vw, 36px);
     text-align: center;
+    margin:5vh 0 0 0 !important;
 }
 .title2{
     width: fit-content;
-    min-height: 2rem;
+    font-size: clamp(14px, 1.4vw, 28px);
     text-align: center;
     margin-left: 5rem;
+    font-weight: 100;
+    font-family: 'Regular';
 }
 .myinfo{
     width: 80%;
@@ -46,11 +50,12 @@
     border: 1px solid rgba(0,  0, 0, 0.2);
     box-shadow: 1px 2px 1px rgba(0,  0, 0, 0.2);
     display: flex;
-    margin-left: 3vw;
+    margin:3vh 0 0 3vw !important;
 }
+
 .myinfo_left{
     width: 40%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +90,7 @@
     height: auto;
 }
 .p{
-    font-size: 1.2vw;
+    font-size: clamp(12px, 1.2vw, 24px);
     width: 5rem;
     min-height: 1rem;
     text-align: center;
@@ -94,7 +99,7 @@
 .p2{
     width: fit-content;
     height: 3.5rem;
-    font-size: 1vw;
+    font-size: clamp(12px, 1.2vw, 24px);
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -103,7 +108,7 @@
 }
 .basicInfo{
     width: 100%;
-    height: 15vh+100px;
+    height: 15vh+50px;
     border-bottom: 1px solid #BEBABA;
     display: flex;
     flex-direction: column;
@@ -119,10 +124,11 @@
 }
 .header{
     width: 100%;
-    height: 10%;
+    height: 5%;
     display: flex;
     align-items: center;
 }
+
 .ball{
     width: 1.2vw;
     height: 1.2vw;
@@ -133,9 +139,9 @@
 }
 .title3{
     width: fit-content;
-    height: 3rem;
+    height: 1rem;
     margin-left: 1%;
-    font-size: 1.5vw;
+    font-size: clamp(12px, 1.2vw, 24px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,12 +157,17 @@
     margin: 2% 0 0 3%;
 }
 .p3{
-    font-size: 1.1vw;
+    font-size: clamp(10px, 1vw, 20px);
     font-weight: 700;
-    margin: 0 0 2.6vh 0;
+    margin: 0 0 1vh 0;
+}
+.span_change{
+    font-size: clamp(8px, 1vw, 18px);
+    font-weight: 100;
+    margin: 0 0 0 14%;
 }
 .span{
-    font-size: 1vw;
+    font-size: clamp(8px, 1vw, 18px);
     font-weight: 100;
     margin: 0 0 0 0;
 }
@@ -169,7 +180,7 @@
 }
 .header_idea{
     width: 10%;
-    height: 10vh;
+    height: 6vh;
     display: flex;
     align-items: center;
 }
@@ -189,4 +200,114 @@
     align-items: center;
     font-size: 1.4vw;
     font-weight: bold;
+}
+/* ipad */
+@media (max-width: 1200px) {
+    .top {
+        height:30vh;
+    }
+    .myinfo {
+        width: 80%;
+        height: auto !important;
+    }
+    .myPhoto{
+        width: 80%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .myName{
+        width: 80%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2vh;
+    }
+    .down{
+       margin: 3% 0 0 0 !important;
+       min-height: auto !important;
+    }
+}
+@media (max-width: 430px) {
+    .top {
+        flex-direction: column;
+        height: auto;
+        min-height: auto !important;
+    }
+    .top_left {
+        width: 100%;
+    }
+    .top_right {
+        width: 100%;
+        margin-top: 3vh;
+    }
+    .myinfo {
+        width: 80%;
+        height: 50%;
+    }
+    .myPhoto{
+        width: 80%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .myName{
+        width: 80%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2vh;
+    }
+    .myinfo_left{
+        width: 40%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header{
+        width: 100%;
+        min-height: 30%;
+        display: flex;
+        font-size: 3vh;
+        align-items: center;
+    }
+    .span_change{
+        margin-left: 20%;
+    }
+    .down{
+       margin: 0 0 0 0 !important;
+       min-height: auto !important;
+    }
+    .myIdea{
+        width: 100%;
+        height: 4vh !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ideaContents{
+        width: 30%;
+        height: 80%;
+        background-color: rgb(243, 141, 82,0.38);
+        clip-path: polygon(
+            200px 0,
+            100% 0,
+            100% 100%,
+            200px 100%,
+            0 50%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        font-weight: bold;
+    }
 }
