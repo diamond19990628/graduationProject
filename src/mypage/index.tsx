@@ -33,7 +33,6 @@ const Mypage = () => {
                         <div className={style.detail}>
                             <p className={style.p3}>所在城市：<span className={style.span}>南京</span></p>
                             <p className={style.p3}>求职意向：<span className={style.span}>UI界面设计师/网页设计师</span></p>
-                            <p className={style.p3}>个人优势：<span className={style.span}>能紧跟时代潮流，擅用AIGC，熟悉国内外设计风向</span></p>
                         </div>
                     </div>
                     <div className={style.skillsInfo}>
@@ -44,8 +43,7 @@ const Mypage = () => {
                         <div className={style.detail}>
                             <p className={style.p3}>设计软件：<span className={style.span}>Figma/Illustrator/Photoshop/Procreate/VS Code/</span></p>
                             <p className={style.p3}><span className={style.span_change}>Rhino/Key shot</span></p>
-                            <p className={style.p3}>求职意向：<span className={style.span}>UI界面设计师/网页设计师</span></p>
-                            <p className={style.p3}>个人优势：<span className={style.span}>能紧跟时代潮流，擅用AIGC，熟悉国内外设计风向</span></p>
+                            <p className={style.p3}>专业方向：<span className={style.span}>UI界面设计师/网页设计/视觉设计/交互设计/产品建模</span></p>
                         </div>
                     </div>
                     <div className={style.skillsInfo}>
@@ -70,7 +68,7 @@ const Mypage = () => {
                     <p className={style.p3}>教育背景：<span className={style.span}>南京传媒学院 本科</span></p>
                     <p className={style.p3}>获奖经历：<span className={style.span}>第十六届“艺融杯”江苏艺术设计大赛 铜奖</span></p>
                     <p className={style.p3} style={{marginTop:"-0.5vw"}}><span className={style.span} style={{marginLeft:"7.7%"}}>第八届“憧憬·美丽中国”艺术设计大赛 银奖</span></p>
-                    <p className={style.p3} style={{marginTop:"-0.5vw"}}><span className={style.span} style={{marginLeft:"7.7%"}}>第十一届“金埔杯”国际城市景观设计大赛 优秀奖</span></p>
+                    <p className={style.p3} style={{marginTop:"-0.5vw"}}><span className={style.span} style={{marginLeft:"7.7%"}}>2026“华夏奖”文化艺术设计大赛（春季） 银奖</span></p>
                     <p className={style.p3} style={{marginTop:"-0.5vw"}}><span className={style.span} style={{marginLeft:"7.7%"}}>第三届“律动·儿童友好城市设计”专项赛 优秀奖</span></p>
                 </div>
             </div>
@@ -79,7 +77,7 @@ const Mypage = () => {
                     <div className={style.ball}></div>
                     <h1 className={style.title3}>个人理念</h1>
                 </div>
-                <div className={style.ideaContents}>拥抱Ai浪潮，让技术赋能审美，在智能时代雕琢更完美的设计作品</div>
+                <div className={style.ideaContents}><span className={style.btn_span}>拥抱Ai浪潮，让技术赋能审美，在智能时代雕琢更完美的设计作品</span></div>
             </div>
         </div>
     )

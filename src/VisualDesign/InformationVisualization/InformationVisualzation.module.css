@@ -55,16 +55,13 @@
     border-radius: 999px;
     width: 2vw;
     height: 2vw;
-    border: 1px solid #BEBABA;
     color: #F38D52;
     display: grid;
     place-items: center;
     line-height: 1;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.2vw;
-    box-shadow:
-    2px 2px 5px rgba(0,0,0,0.3);
+    font-size: 2vw;
 }
 .hidden{
     visibility: hidden;

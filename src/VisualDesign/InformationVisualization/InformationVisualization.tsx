@@ -7,10 +7,10 @@ import DesignImg2 from "../../assets/design_sun_2.png";
 import DesignImg3 from "../../assets/Information_desigin3.png";
 import DesignImg4 from "../../assets/Information_desigin4.png";
 import DesignImg5 from "../../assets/Information_design5.png";
-import Mini1 from "../../assets/mini1.png";
-import Mini2 from "../../assets/mini2.png";
-import Mini3 from "../../assets/mini3.png";
-import Mini4 from "../../assets/mini4.png";
+import Mini1 from "../../assets/mini1.jpg";
+import Mini2 from "../../assets/mini2.jpg";
+import Mini3 from "../../assets/mini3.jpg";
+import Mini4 from "../../assets/mini4.jpg";
 import style from "./InformationVisualzation.module.css";
 const InformationVisualzation:React.FC<Props> = ({currentId}) => {
     const [currentPage,setCurrentPage] = useState(1);

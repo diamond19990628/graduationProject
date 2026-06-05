@@ -96,18 +96,15 @@
     border-radius: 999px;
     width: 2vw;
     height: 2vw;
-    border: 1px solid #BEBABA;
     color: #F38D52;
     display: grid;
     place-items: center;
     line-height: 1;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.2vw;
+    font-size: 2vw;
     margin-left: 1vw;
     transform: rotate(90deg);
-    box-shadow:
-    2px 2px 5px rgba(0,0,0,0.3);
 }
 .hidden{
     visibility: hidden;
@@ -221,6 +218,8 @@
 .designImgBody1,.designImgBody2,.designImgBody3,.designImgBody4{
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .WebDesignImg{
     width: 100%;

@@ -149,7 +149,7 @@
 .detail{
     width: 90%;
     height: 50%;
-    margin: 2% 0 0 3%;
+    margin: 1% 0 0 3%;
 }
 .detail2{
     width: 90%;
@@ -200,6 +200,9 @@
     align-items: center;
     font-size: 1.4vw;
     font-weight: bold;
+}
+.btn_span{
+    margin-left: 10%;
 }
 /* ipad */
 @media (max-width: 1200px) {

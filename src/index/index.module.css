@@ -12,7 +12,7 @@
     width:fit-content;
     height: auto;
     font-family: 'Extra Bold';
-    font-size: 2vw;
+    font-size: clamp(16px, 3vw, 36px);
     color: #000;
     padding: 2vw 1vw 0 1vw;
     box-sizing: border-box;
@@ -22,8 +22,8 @@
 .subtitle{
     width:fit-content;
     height: auto;
-    font-size: 1.7vw;
-    margin: 0.5vw 0 0 0 !important;
+    font-size: clamp(14px, 1.4vw, 28px);
+    margin: 0 0 0 0 !important;
     padding: 0 1vw 0 8vw;
     font-weight: 100;
 }

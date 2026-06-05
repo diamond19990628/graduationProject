@@ -3,13 +3,15 @@ type Props = {
 }
 const WebList = [
     {page_id:1,name:"“食尚华夏”网页端界面设计",src:SSWebVideo},
-    {page_id:2,name:"“儿童社区医院疫苗接种”电子屏设计",src:WebSub},
+    {page_id:2,name:"“Superman call”网页设计",src:""},
     {page_id:3,name:"“Ai薪引擎”网页设计",src:AIVideo},
 ];
 import { useState } from "react";
 import AIVideo from "../../assets/AIVideo.mp4";
 import SSWebVideo from "../../assets/ssWebVideo.mp4";
-import WebSub from "../../assets/WebSubSearch.mp4";
+import Super1 from "../../assets/Superman1.jpg";
+import Super2 from "../../assets/Superman2.jpg";
+import SuperMain from "../../assets/Superman3.jpg";
 import style from "./Web.module.css";
 const Iphone:React.FC<Props> = ({setCurrentPage}) => {
     const [currentPageID,setCurrentPageID] = useState(1);
@@ -33,9 +35,21 @@ const Iphone:React.FC<Props> = ({setCurrentPage}) => {
                 </div>
                 <div className={style.startLink}>
                     <h2 className={style.videoTitle}>{WebList.find(item=>item.page_id===currentPageID)?.name || ""}</h2>
-                    <video key={WebList.find(item=>item.page_id===currentPageID)?.page_id} className={style.videoBody} src={
+                    {currentPageID===2 ? 
+                        <div className={style.SupermanBody}>
+                            <div className={style.SuperLeft}>
+                                <img src={SuperMain}/>
+                            </div>
+                            <div className={style.SuperRight}>
+                                <span className={style.designSpan}>设计规范</span>
+                                <img src={Super1} className={style.SuperImg1}/>
+                                <img src={Super2} className={style.SuperImg2}/>
+                            </div>
+                        </div>
+                            :
+                        <video key={WebList.find(item=>item.page_id===currentPageID)?.page_id} className={style.videoBody} src={
                         WebList.find(item=>item.page_id===currentPageID)?.src || ""
-                    } controls/>
+                    } controls/>}
                 </div>
                 <div className={style.next_body}>
                     <div className={`${style.next} ${currentPageID===WebList.length?style.hidden:""}`} onClick={handleNextPage}>
