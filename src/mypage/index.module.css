@@ -168,16 +168,9 @@
     justify-content: center;
     padding: 0 0 0 1.5vw;
 }
-.internshipInfo_body{
-    width: 95%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 .internshipInfo{
     width: 100%;
-    height: 55%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,7 +228,7 @@
     display: flex;
 }
 .p3_right{
-    font-size: clamp(10px, 1.2vw, 20px);
+    font-size: clamp(10px, 1.03vw, 20px);
     font-weight: 700;
     margin: 0 0 2.8vh 0;
 }
