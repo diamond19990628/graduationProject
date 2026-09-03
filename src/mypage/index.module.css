@@ -5,29 +5,25 @@
 }
 .top{
     width: 100%;
-    height: 48vh;
+    min-height: 40vh;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.down{
-    width: 90%;
-    min-height: 28vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5%;
-    margin-top: 1px;
+    align-items: stretch;
+    padding-bottom: 2vh;
 }
 .top_left{
-    width: 40%;
-    height: 100%;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 .top_right{
     width: 50%;
-    height: 100%;
+    height: auto;
     margin-top: 6vh;
+    display: flex;
+    flex-direction: column;
 }
 .title1{
     width: fit-content;
@@ -44,7 +40,7 @@
     font-family: 'Regular';
 }
 .myinfo{
-    width: 80%;
+    width: 70%;
     height: 12vw;
     border-radius: 10px;
     border: 1px solid rgba(0,  0, 0, 0.2);
@@ -70,7 +66,7 @@
     justify-content: center;
 }
 .myPhoto{
-    width: 80%;
+    width: 60%;
     height: 50%;
     display: flex;
     align-items: center;
@@ -90,7 +86,7 @@
     height: auto;
 }
 .p{
-    font-size: clamp(12px, 1.2vw, 24px);
+    font-size: clamp(12px, 1.3vw, 24px);
     width: 5rem;
     min-height: 1rem;
     text-align: center;
@@ -106,9 +102,50 @@
     align-items: center;
     border-bottom: 1px solid #D9D9D9;
 }
+
+.leftSection{
+    width: 83%;
+    margin: 0 0 0 3vw;
+    height:25%;
+    padding-bottom: 1.5vh;
+    padding-top: 1.5vh;
+}
+.leftSection2{
+    width: 83%;
+    margin: 0 0 0 3vw;
+    height:40%;
+    padding-bottom: 1.5vh;
+    padding-top: 1.5vh;
+}
+.leftSection:last-child{
+    border-bottom: none;
+}
+.leftDetail{
+    width: 94%;
+    margin: 3vh 0 0 3%;
+}
+.awardList{
+    width: 75%;
+}
+.awardRow{
+    display: flex;
+    gap: 1vw;
+    margin-bottom: 0.6vh;
+}
+.awardName,
+.awardPrize{
+    font-size: clamp(8px, 1.03vw, 18px);
+    font-weight: 100;
+    color: #333;
+}
+.awardName {
+    width: 80%;
+    flex-shrink: 0;
+}
+
 .basicInfo{
     width: 100%;
-    height: 15vh+50px;
+    height: 20%;
     border-bottom: 1px solid #BEBABA;
     display: flex;
     flex-direction: column;
@@ -116,15 +153,51 @@
 }
 .skillsInfo{
     width: 100%;
-    height: 10vh+100px;
+    height: 20%;
     border-bottom: 1px solid #BEBABA;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+.skills_body{
+    width: 95%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 1.5vw;
+}
+.internshipInfo_body{
+    width: 95%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.internshipInfo{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vh 0;
+}
+.internshipInfo_body{
+    width: 90%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 1.5vw;
+}
+.basicInfo,.skillsInfo,
+.internshipInfo{
+    margin: 0 0 20px 0;
 }
 .header{
     width: 100%;
-    height: 5%;
+    height: 3vh;
     display: flex;
     align-items: center;
 }
@@ -141,35 +214,62 @@
     width: fit-content;
     height: 1rem;
     margin-left: 1%;
-    font-size: clamp(12px, 1.2vw, 24px);
+    font-size: clamp(8px, 2vw, 24px);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.detail{
+.rightDetail {
     width: 90%;
-    height: 50%;
-    margin: 1% 0 0 3%;
-}
-.detail2{
-    width: 90%;
-    height: 50%;
-    margin: 2% 0 0 3%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
 }
 .p3{
-    font-size: clamp(10px, 1vw, 20px);
+    font-size: clamp(10px, 1.03vw, 20px);
     font-weight: 700;
     margin: 0 0 1vh 0;
 }
-.span_change{
-    font-size: clamp(8px, 1vw, 18px);
-    font-weight: 100;
-    margin: 0 0 0 14%;
+.awards{
+    display: flex;
+}
+.p3_right{
+    font-size: clamp(10px, 1.2vw, 20px);
+    font-weight: 700;
+    margin: 0 0 2.8vh 0;
+}
+.p3_right:last-child{
+    margin-bottom: 0;
 }
 .span{
-    font-size: clamp(8px, 1vw, 18px);
+    font-size: clamp(10px, 1.03vw, 20px);
     font-weight: 100;
     margin: 0 0 0 0;
+}
+.taskList{
+    list-style: disc;
+    margin: 1vh 0 0 1.2em;
+    padding: 0;
+}
+.taskItem{
+    font-size: clamp(8px, 1.03vw, 20px);
+    font-weight: 100;
+    color: #333;
+    line-height: 2.2;
+    margin-bottom: 1.2vh;
+}
+.taskItem:last-child{
+    margin-bottom: 0;
+}
+
+.right_basic_body{
+    width: 90%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 1.5vw;
 }
 .myIdea{
     width: 100%;
@@ -211,6 +311,14 @@
         display: flex;
         justify-content: flex-start;
         align-items: stretch;
+        flex-direction: column;
+    }
+    .top_left,
+    .top_right {
+        width: 100%;
+    }
+    .top_right {
+        margin-top: 3vh;
     }
     .myinfo {
         width: 80%;
@@ -232,9 +340,12 @@
         justify-content: center;
         margin-top: 2vh;
     }
-    .down{
-       margin: 3% 0 0 0 !important;
-       min-height: auto !important;
+    .leftSection{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .p3_right{
+        margin-bottom: 2vh;
     }
 }
 @media (max-width: 500px) {
@@ -299,12 +410,16 @@
         font-size: 3vh;
         align-items: center;
     }
-    .span_change{
-        margin-left: 20%;
+    .leftSection{
+        width: 90%;
+        margin-left: 5%;
     }
-    .down{
-       margin: 0 0 0 0 !important;
-       min-height: auto !important;
+    .awardRow{
+        flex-direction: column;
+        display: flex;
+    }
+    .awardPrize{
+        text-align: left;
     }
     .myIdea{
         width: 80vw;

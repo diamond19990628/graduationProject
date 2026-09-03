@@ -16,6 +16,8 @@ import coffeeDesign3 from "../assets/coffeeProductDesign3.png";
 import museumDesign1 from "../assets/museumDesign.png";
 import museumDesign2 from "../assets/museumDesign2.png";
 import museumDesign3 from "../assets/museumDesign3.png";
+import museumDesign4 from "../assets/museumDesign4.png";
+import museumDesign5 from "../assets/museumDesign5.png";
 import wcDesign1 from "../assets/wcProductDesign1.png";
 import wcDesign2 from "../assets/wcProductDesign2.png";
 import wcDesign3 from "../assets/wcProductDesign3.png";
@@ -77,10 +79,10 @@ const ProductDesign:React.FC = () => {
                             </div>
                             <div className={style.right_down}>
                                 <div className={style.museum_small_body}>
-                                    <img src={museumDesign2} className={style.small_Child_img}/>
+                                    <img src={museumDesign4} className={style.small_Child_img}/>
                                 </div>
                                 <div className={style.museum_small_body}>
-                                    <img src={museumDesign3} className={style.small_Child_img}/>
+                                    <img src={museumDesign5} className={style.small_Child_img}/>
                                 </div>
                             </div>
                         </div>
