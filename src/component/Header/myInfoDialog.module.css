@@ -45,7 +45,7 @@
 }
 .span2{
     font-size: 0.6vw;
-    font-weight: 100;
+    font-weight: 400;
     display: flex;
     align-items: center;
 }
@@ -59,11 +59,11 @@
 .hidden{
     display: none;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1368px) {
     .main{
         position: fixed;
-        min-width: 50vw;
-        min-height: 30vh;
+        min-width: 28vw;
+        min-height: 16vh;
         top: 10%;
         right: 3vw;
         border: 1px solid rgba(0,  0, 0, 0.2);
@@ -73,8 +73,8 @@
         z-index: 99999;
     }
     .ball{
-        width: 5vw;
-        height: 5vw;
+        width: 2vw;
+        height: 2vw;
     }
     .header{
         width: 85%;
@@ -84,7 +84,7 @@
         align-items: center;
     }
     .span{
-        font-size: 4vw;
+        font-size: 2vw;
     }
     .body{
         width: 100%;
@@ -93,15 +93,15 @@
         margin-left: 5%;
     }
     .p{
-        font-size: 4vw;
+        font-size: 2vw;
         font-weight: bolder;
         margin-top: 6%;
         display: flex;
         align-items: center;
     }
     .span2{
-        font-size: 3vw;
-        font-weight: 100;
+        font-size: 1.6vw;
+        font-weight: 400;
         display: flex;
         align-items: center;
     }
@@ -109,7 +109,7 @@
         color: #F38D52;
         width: 90%;
         text-align: right;
-        font-size: 3vw;
+        font-size: 2vw;
         margin-top: 5%;
     }
     .hidden{
