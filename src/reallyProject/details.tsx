@@ -1,13 +1,12 @@
-type Props = {
-    setAppPage:React.Dispatch<React.SetStateAction<number>>
-}
+import { useNavigate } from "react-router-dom";
 import Hb1 from "../assets/haibao1.png";
 import Hb2 from "../assets/haibao2.png";
 import Header from "../component/Header/Header";
 import style from "./details.module.css";
-const Details:React.FC<Props> = ({setAppPage}) => {
+const Details:React.FC = () => {
+    const navigate = useNavigate();
     const handleToReallyProduct = () => {
-        setAppPage(5);
+        navigate("/projects?page=2");
     }
     return(
         <>

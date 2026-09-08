@@ -1,22 +1,21 @@
-type Props = {
-    setCurrentPage:React.Dispatch<React.SetStateAction<number>>
-}
+import { useQueryPage } from "../../router/useRoutePage";
+import { useNavigate } from "react-router-dom";
 const WebList = [
     {page_id:1,name:"“食尚华夏”网页端界面设计",src:SSWebVideo},
     {page_id:2,name:"“Superman call”网页设计",src:""},
     {page_id:3,name:"“Ai薪引擎”网页设计",src:AIVideo},
 ];
-import { useState } from "react";
 import AIVideo from "../../assets/AIVideo.mp4";
 import SSWebVideo from "../../assets/ssWebVideo.mp4";
 import Super1 from "../../assets/Superman1.jpg";
 import Super2 from "../../assets/Superman2.jpg";
 import SuperMain from "../../assets/Superman3.jpg";
 import style from "./Web.module.css";
-const Iphone:React.FC<Props> = ({setCurrentPage}) => {
-    const [currentPageID,setCurrentPageID] = useState(1);
+const Iphone:React.FC = () => {
+    const navigate = useNavigate();
+    const [currentPageID,setCurrentPageID] = useQueryPage("page", 1, 3);
     const handleReturn = () => {
-        setCurrentPage(0);
+        navigate("/ui-design");
     }
     const handleNextPage = () => {
         setCurrentPageID(currentPageID+1);

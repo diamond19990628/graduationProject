@@ -1,6 +1,5 @@
-type Props = {
-    currentId:React.Dispatch<React.SetStateAction<number>>,
-};
+import { useQueryPage } from "../../router/useRoutePage";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import DhDesign1 from "../../assets/DhDesign1.png";
 import DhDesign2 from "../../assets/DhDesign2.png";
@@ -83,8 +82,9 @@ const getFallbackContainerSize = () => {
     };
 };
 
-const Illustration:React.FC<Props> = ({currentId})=>{
-    const [currentPage,setCurrentPage] = useState(0);
+const Illustration:React.FC = ()=>{
+    const navigate = useNavigate();
+    const [currentPage,setCurrentPage] = useQueryPage("work", 0, 6);
     const bodyRef = useRef<HTMLDivElement>(null);
     const [balls, setBalls] = useState<BallItem[]>(() => {
         const { width, height } = getFallbackContainerSize();
@@ -151,7 +151,7 @@ const Illustration:React.FC<Props> = ({currentId})=>{
         };
     },[currentPage])
     const handleReturn = ()=>{
-        currentId(0);
+        navigate("/visual-design");
     }
     const handleMenu = () => {
         setCurrentPage(0);

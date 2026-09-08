@@ -1,3 +1,4 @@
+import { Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import { useState } from "react";
 import StartDialog from "./component/common/startDialog";
 import Header from "./component/Header/Header";
@@ -10,25 +11,31 @@ import ReallyProject from "./reallyProject/index";
 import UIDesign from "./UIDesign/index";
 import VisualDesign from "./VisualDesign";
 
+const Layout = () => (
+  <>
+    <Header />
+    <div style={{ display: "flex" }}><Menu /><Outlet /></div>
+  </>
+);
+
 const App = () => {
-  const [currentPage, setCurrentPage] = useState(0);
-  const [DialogState,setDialogState] = useState(true);
-  if (currentPage === 6) {
-    return <Detail setAppPage={setCurrentPage}/>;
-  }
+  const [DialogState, setDialogState] = useState(true);
+  const { pathname } = useLocation();
   return (
     <>
-      <Header />
-      <div style={{ display: "flex" }}>
-        <Menu setCurrentPage={setCurrentPage} currentPage={currentPage}/>
-        {currentPage===0 && <Mypage/>}
-        {currentPage===1 && <Main/>}
-        {currentPage===2 && <VisualDesign/>}
-        {currentPage===3 && <UIDesign/>}
-        {currentPage===4 && <ProductDesign/>}
-        {currentPage===5 && <ReallyProject setAppPage={setCurrentPage}/>}
-      </div>
-      {DialogState && (<StartDialog setDialogState={setDialogState}/>)}
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Mypage />} />
+          <Route path="interests/:category?" element={<Main />} />
+          <Route path="visual-design/:category?" element={<VisualDesign />} />
+          <Route path="ui-design/:category?" element={<UIDesign />} />
+          <Route path="product-design/:category?" element={<ProductDesign />} />
+          <Route path="projects" element={<ReallyProject />} />
+        </Route>
+        <Route path="projects/poster" element={<Detail />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      {DialogState && pathname !== "/projects/poster" && <StartDialog setDialogState={setDialogState} />}
     </>
   );
 };

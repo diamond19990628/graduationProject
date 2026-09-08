@@ -1,3 +1,4 @@
+import { useCategoryPage } from "../router/useRoutePage";
 import { useEffect, useState } from "react";
 import style from "./index.module.css";
 import Iphone from "./Iphone/Iphone";
@@ -10,7 +11,7 @@ type ball = {
 };
 
 const UIDesignIndex:React.FC = () => {
-    const [currentPage,setCurrentPage] = useState(0);
+    const [currentPage,setCurrentPage] = useCategoryPage("/ui-design", ["", "mobile", "web"], 0);
     const handlePageChange = (event:React.MouseEvent) => {
         const pageId = event.currentTarget.getAttribute("data-id");
         setCurrentPage(Number(pageId));
@@ -72,12 +73,12 @@ const UIDesignIndex:React.FC = () => {
             )}
             {currentPage===1&&(
                 <>
-                    <Iphone setCurrentPage={setCurrentPage}/>
+                    <Iphone/>
                 </>
             )}
             {currentPage===2&&(
                 <>
-                    <Web setCurrentPage={setCurrentPage}/>
+                    <Web/>
                 </>
             )}
         </div>

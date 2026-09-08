@@ -1,7 +1,5 @@
-type Props = {
-    setCurrentPage:React.Dispatch<React.SetStateAction<number>>
-}
-import { useState } from "react";
+import { useQueryPage } from "../../router/useRoutePage";
+import { useNavigate } from "react-router-dom";
 import cztmVideo from "../../assets/czNoodes.mp4";
 import sshxVideo from "../../assets/sshyVideo.mp4";
 import xgyVideo from "../../assets/xgyVideo.mp4";
@@ -17,10 +15,11 @@ const smartPhoneList:Array<any> = [
     {page_id:4,name:"“校园医陪”手机端界面设计",src:xyypVideo},
     {page_id:5,name:"“池州滩面”手机端界面设计",src:cztmVideo}
 ];
-const Iphone:React.FC<Props> = ({setCurrentPage}) => {
-    const [currentPageID,setCurrentPageID] = useState(1);
+const Iphone:React.FC = () => {
+    const navigate = useNavigate();
+    const [currentPageID,setCurrentPageID] = useQueryPage("page", 1, 5);
     const handleReturn = () => {
-        setCurrentPage(0);
+        navigate("/ui-design");
     }
     const handleNextPage = () => {
         setCurrentPageID(currentPageID+1);

@@ -1,6 +1,5 @@
-type Props = {
-    currentId:React.Dispatch<React.SetStateAction<number>>,
-};
+import { useQueryPage } from "../../router/useRoutePage";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import DesignImg1 from "../../assets/design_sun_1.png";
 import DesignImg2 from "../../assets/design_sun_2.png";
@@ -12,8 +11,9 @@ import Mini2 from "../../assets/mini2.jpg";
 import Mini3 from "../../assets/mini3.jpg";
 import Mini4 from "../../assets/mini4.jpg";
 import style from "./InformationVisualzation.module.css";
-const InformationVisualzation:React.FC<Props> = ({currentId}) => {
-    const [currentPage,setCurrentPage] = useState(1);
+const InformationVisualzation:React.FC = () => {
+    const navigate = useNavigate();
+    const [currentPage,setCurrentPage] = useQueryPage("page", 1, 5);
     const totalPage = 5;
     const [isNextDown, setNextMouseDown] = useState(false);
     const [isPrevDown, setPrevMouseDown] = useState(false);
@@ -28,7 +28,7 @@ const InformationVisualzation:React.FC<Props> = ({currentId}) => {
         setPrevMouseDown(false);
     };
     const handleReturnMenu = ()=>{
-        currentId(0);
+        navigate("/visual-design");
     }
     const handleNextPage = () =>{
         setCurrentPage(currentPage+1);
