@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useQueryPage } from "../router/useRoutePage";
+import { useCategoryPage } from "../router/useRoutePage";
 import ChildProductDesign1 from "../assets/ChildProductDesign1.png";
 import ChildProductDesign2 from "../assets/ChildProductDesign2.png";
 import ChildProductDesign3 from "../assets/ChildProductDesign3.png";
@@ -39,8 +40,8 @@ const menuList = [
     {id:7,name:"建模设计"}
 ];
 const ProductDesign:React.FC = () => {
-    const [currentPage,setCurrentPage] = useState(1);
-    const [currentModulePage,setCurrentModulePage] = useState(1);
+    const [currentPage,setCurrentPage] = useCategoryPage("/product-design", ["museum", "children", "gift-box", "cultural", "coffee", "jewelry", "modeling"], 1);
+    const [currentModulePage,setCurrentModulePage] = useQueryPage("model", 1, 4);
     const handleNextModulePage = () => {
         setCurrentModulePage(currentModulePage+1);
     }

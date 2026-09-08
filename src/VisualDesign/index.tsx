@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCategoryPage } from "../router/useRoutePage";
 import Illustration from "./Illustration/Illustration";
 import style from "./index.module.css";
 import InformationVisualzation from "./InformationVisualization/InformationVisualization";
@@ -9,7 +9,7 @@ const menuList:Array<any> = [
     {menu_id:3,menu_name:"静态网页排版设计",ballClassName:"ball3",menu_className:"menu_body_3"}
 ];
 const VisualDesign:React.FC = ()=>{
-    const [currentId,setCurrentId] = useState(0);
+    const [currentId,setCurrentId] = useCategoryPage("/visual-design", ["", "information", "illustration", "web"], 0);
     const handleMenuClick = (event:React.MouseEvent)=>{
         const menu_id = event.currentTarget.getAttribute("data-id");
         setCurrentId(Number(menu_id));
@@ -23,7 +23,7 @@ const VisualDesign:React.FC = ()=>{
                     <div className={style.body}>
                         <ul className={style.ul}>
                             {menuList.map((item)=>(
-                                <div className={style[item.menu_className]}>
+                                <div key={item.menu_id} className={style[item.menu_className]}>
                                     <div className={style[item.ballClassName]}></div>
                                     <li key={item.menu_id} className={style.menu_li} data-id={item.menu_id} onClick={handleMenuClick}>{item.menu_name}</li>
                                 </div>
@@ -32,9 +32,9 @@ const VisualDesign:React.FC = ()=>{
                     </div>
                 </>
             )}
-            {currentId===1 && <InformationVisualzation currentId={setCurrentId}/>}
-            {currentId===2 && <Illustration currentId={setCurrentId}/>}
-            {currentId===3 && <WebDesign currentId={setCurrentId}/>}
+            {currentId===1 && <InformationVisualzation/>}
+            {currentId===2 && <Illustration/>}
+            {currentId===3 && <WebDesign/>}
         </div>
     );
 }

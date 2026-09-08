@@ -1,6 +1,5 @@
-type Props = {
-    currentId:React.Dispatch<React.SetStateAction<number>>,
-};
+import { useQueryPage } from "../../router/useRoutePage";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Alala1 from "../../assets/AlAlaDesign1.png";
 import Alala2 from "../../assets/AlAlaDesign2.png";
@@ -20,10 +19,11 @@ import WebIndexDesign2 from "../../assets/WebIndexDesign2.png";
 import WebIndexDesign3 from "../../assets/WebIndexDesign3.png";
 import WebIndexDesign4 from "../../assets/WebIndexDesign4.png";
 import style from "./WebDesign.module.css";
-const WebDesign:React.FC<Props> = ({currentId}) => {
-    const [currentPage,setCurrentPage] = useState(1);
+const WebDesign:React.FC = () => {
+    const navigate = useNavigate();
+    const [currentPage,setCurrentPage] = useQueryPage("page", 1, 5);
     const handleReturn = () => {
-        currentId(0);
+        navigate("/visual-design");
     }
     const handleNextPage = () => {
         setCurrentPage(currentPage+1);

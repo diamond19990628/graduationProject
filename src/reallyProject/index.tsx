@@ -1,14 +1,13 @@
-type Props = {
-    setAppPage:React.Dispatch<React.SetStateAction<number>>
-}
-import { useState } from "react";
+import { useQueryPage } from "../router/useRoutePage";
+import { useNavigate } from "react-router-dom";
 import tshyMiniProject from "../assets/ReallyProject1.png";
 import ReallyProject21 from "../assets/ReallyProject2_1.png";
 import ReallyProject22 from "../assets/ReallyProject2_2.png";
 import style from "./index.module.css";
 
-const ReallyProject:React.FC<Props> = ({setAppPage}) => {
-    const [currentPage,setCurrentPage] = useState(1);
+const ReallyProject:React.FC = () => {
+    const navigate = useNavigate();
+    const [currentPage,setCurrentPage] = useQueryPage("page", 1, 2);
     const handleNextPage = () => {
         setCurrentPage(currentPage+1);
     }
@@ -16,7 +15,7 @@ const ReallyProject:React.FC<Props> = ({setAppPage}) => {
         setCurrentPage(currentPage-1);
     }
     const handleToDetail = () => {
-        setAppPage(6);
+        navigate("/projects/poster");
     }
     return(
         <div className={style.main}>

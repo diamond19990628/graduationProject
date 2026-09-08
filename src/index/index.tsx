@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCategoryPage } from "../router/useRoutePage";
 import style from "./index.module.css";
 import Other from "./other";
 import Photography from "./photography";
@@ -11,7 +11,7 @@ const menuList:{id:number, name:string}[] = [
     {id:3, name:"更多..."}
 ];
 const Main:React.FC = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useCategoryPage("/interests", ["photography", "reading", "sports", "other"], 0);
     const handleMenuMove = (index : number)=>{
         setActiveIndex(index);
     }
