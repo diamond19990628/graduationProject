@@ -1,3 +1,7 @@
+.aiCardImage { display: block; width: 94%; height: auto; margin: 0 auto; }
+.invitationImage { display: block; width: auto; max-width: 90%; height: 34vw; object-fit: contain; margin: 0 auto; }
+.detailLink { display: block; margin: 4vw auto 0; padding: 0 12px 4px; background: none; border: 0; border-bottom: 1px solid #bebaba; color: #606060; font: inherit; cursor: pointer; }
+@media (max-width: 500px) { .invitationImage { height: auto; width: 70%; } }
 .main{
     flex: 1;
     min-width: 0;
