@@ -81,6 +81,34 @@
     width: 100%;
     height: 100%;
 }
+.img5_layout {
+    position: relative;
+    width: 94%;
+    aspect-ratio: 584 / 210;
+}
+.img5_layout img {
+    position: absolute;
+    display: block;
+    object-fit: fill;
+}
+.img5_front {
+    left: 0;
+    top: 0;
+    width: 49.66%;
+    height: 96.19%;
+}
+.img5_top {
+    left: 52.05%;
+    top: 0.95%;
+    width: 28.42%;
+    height: 55.24%;
+}
+.img5_perspective {
+    right: 0;
+    bottom: 0;
+    width: 28.42%;
+    height: 55.24%;
+}
 @media (max-width: 500px) {
     .img1_body,
     .img2_body,

@@ -41,7 +41,7 @@ const menuList = [
 ];
 const ProductDesign:React.FC = () => {
     const [currentPage,setCurrentPage] = useCategoryPage("/product-design", ["museum", "children", "gift-box", "cultural", "coffee", "jewelry", "modeling"], 1);
-    const [currentModulePage,setCurrentModulePage] = useQueryPage("model", 1, 4);
+    const [currentModulePage,setCurrentModulePage] = useQueryPage("model", 1, 5);
     const handleNextModulePage = () => {
         setCurrentModulePage(currentModulePage+1);
     }
@@ -203,7 +203,7 @@ const ProductDesign:React.FC = () => {
                             </div>
                             <div className={style.btn_body}>
                                 <div className={`${style.prev} ${currentModulePage===1?style.hidden:""}`} onClick={handlePrevModulePage}>&lt;&lt;</div>
-                                <div className={`${style.next} ${currentModulePage===4?style.hidden:""}`} onClick={handleNextModulePage}>&gt;&gt;</div>
+                                <div className={`${style.next} ${currentModulePage===5?style.hidden:""}`} onClick={handleNextModulePage}>&gt;&gt;</div>
                             </div>
                         </div>
                     </>
