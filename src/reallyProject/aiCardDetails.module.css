@@ -1,0 +1,26 @@
+.main { padding: 2vw 3vw 4vw; }
+.back { display: inline-block; color: #cc976f; font-size: 28px; text-decoration: none; margin-bottom: 2vw; }
+.body { display: flex; gap: 3vw; align-items: stretch; }
+.navigation { width: 21%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 1vw 0 3vw 2vw; }
+.section { display: flex; align-items: center; gap: 12px; text-align: left; border: 0; background: none; color: #111; font: inherit; font-size: clamp(14px, 1.8vw, 24px); cursor: pointer; padding: 8px 0; }
+.section::before { content: ""; width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%; background: #e1e1e1; }
+.active::before { background: #eb965c; }
+.content { flex: 1; min-width: 0; min-height: 36vw; display: flex; align-items: center; justify-content: center; }
+.structure { display: flex; gap: 2vw; width: 100%; align-items: center; }
+.videoPlaceholder { width: 100%; aspect-ratio: 1.9; display: grid; place-items: center; background: #fff; font-size: 18px; }
+.structure .videoPlaceholder { width: 66%; aspect-ratio: 1.32; }
+.productImages { width: 32%; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.device { width: 100%; aspect-ratio: 1.65; object-fit: cover; }
+.screen { width: 70%; height: auto; }
+.inside { width: 100%; max-height: 42vw; }
+.miniProgram { width: 76%; height: auto; }
+@media (max-width: 500px) {
+  .body { flex-direction: column; }
+  .navigation { width: 100%; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .section { gap: 7px; font-size: 14px; }
+  .section::before { width: 14px; height: 14px; }
+  .content { min-height: 65vw; }
+  .inside { max-height: none; }
+  .videoPlaceholder { font-size: 14px; }
+  .miniProgram { width: 95%; }
+}

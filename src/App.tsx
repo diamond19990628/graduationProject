@@ -10,6 +10,7 @@ import Detail from "./reallyProject/details";
 import ReallyProject from "./reallyProject/index";
 import UIDesign from "./UIDesign/index";
 import VisualDesign from "./VisualDesign";
+import AICardDetails from "./reallyProject/aiCardDetails";
 
 const Layout = () => (
   <>
@@ -33,9 +34,10 @@ const App = () => {
           <Route path="projects" element={<ReallyProject />} />
         </Route>
         <Route path="projects/poster" element={<Detail />} />
+        <Route path="projects/ai-card" element={<AICardDetails />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      {DialogState && pathname !== "/projects/poster" && <StartDialog setDialogState={setDialogState} />}
+      {DialogState && pathname !== "/projects/poster" && pathname !== "/projects/ai-card" && <StartDialog setDialogState={setDialogState} />}
     </>
   );
 };
