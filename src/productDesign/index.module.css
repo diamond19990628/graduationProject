@@ -1,3 +1,16 @@
+.header[hidden] { display: none; }
+.giftPages { position: relative; width: 100%; min-height: 75vh; }
+.giftPages:has(> .boxBody) { height: 65vh; min-height: 0; }
+.giftPages .giftPrevious, .giftPages .giftNext {
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%) rotate(90deg);
+    border: 0;
+    background: transparent;
+}
+.giftPrevious { top: 1vw; }
+.giftNext { bottom: 1vw; }
 .main{
     flex: 1;
     min-width: 0;
@@ -334,6 +347,10 @@
     font-size: 1.2vw;
     transform: rotate(90deg);
 }
+.petModelPage { position: relative; }
+.petModelPage .btn_body { position: absolute; top: 2vh; left: 0; height: 2.5vw; margin: 0; }
+.petModelPage .btn_body .next { display: none; }
+.petModelPage .moduleBody { flex: initial; padding-top: 1vw; }
 .hidden{
     visibility: hidden;
 }
