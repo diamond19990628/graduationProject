@@ -17,6 +17,9 @@ import module_51 from "../assets/ModuleDesign5_1.png";
 import module_52 from "../assets/ModuleDesign5_2.png";
 import module_53 from "../assets/ModuleDesign5_3.png";
 import style from "./moduleDesign.module.css";
+import catScene from "../assets/model-cat-scene.webp";
+import catExploded from "../assets/model-cat-exploded.webp";
+import catViews from "../assets/model-cat-views.webp";
 const ModuleDesign:React.FC<Props> = ({currentPage}) => {
     return(
         
@@ -79,6 +82,14 @@ const ModuleDesign:React.FC<Props> = ({currentPage}) => {
                     <img src={module_52} className={style.img5_front} alt="黄色烤面包机建模正视图"/>
                     <img src={module_53} className={style.img5_top} alt="黄色烤面包机建模俯视图"/>
                     <img src={module_51} className={style.img5_perspective} alt="黄色烤面包机建模透视图"/>
+                </div>
+            )}
+            {currentPage==6 && (
+                <div className={style.catLayout}>
+                    <img className={style.catExploded} src={catExploded} alt="猫咪造型设备结构爆炸图" />
+                    <h2 className={style.catTitle}>一体式宠物加湿饮水机</h2>
+                    <img className={style.catScene} src={catScene} alt="猫咪造型设备场景效果图" />
+                    <img className={style.catViews} src={catViews} alt="猫咪造型设备建模三视图" />
                 </div>
             )}
         </>

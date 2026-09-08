@@ -1,3 +1,10 @@
+/* Figma 42:222：以 (437, 453) 为原点，内容范围 1449 × 604。 */
+.catLayout { position: relative; width: 94%; aspect-ratio: 1449 / 604; }
+.catLayout img { position: absolute; display: block; object-fit: contain; }
+.catExploded { left: 0; top: 4.9669%; width: 19.5307%; height: 91.3907%; }
+.catScene { right: 0; top: 0; width: 30.9869%; height: 44.5364%; }
+.catViews { left: 21.3941%; top: 41.3907%; width: 72.7398%; height: 58.6093%; }
+.catTitle { position: absolute; left: 33.4023%; top: 13.9073%; margin: 0; font-size: 1.8vw; font-weight: 700; line-height: 1.4; white-space: nowrap; }
 .img1_body{
     width: 28%;
     height: 100%;

@@ -30,6 +30,7 @@ import wcDesign8 from "../assets/wcProductDesign8.png";
 import style from "./index.module.css";
 // 引入图片组件
 import ModuleDesign from "./moduleDesign";
+import GiftBoxPages from "./giftBoxPages";
 const menuList = [
     {id:1,name:"博物馆衍生产品设计"},
     {id:2,name:"儿童安抚挂饰产品设计"},
@@ -41,7 +42,8 @@ const menuList = [
 ];
 const ProductDesign:React.FC = () => {
     const [currentPage,setCurrentPage] = useCategoryPage("/product-design", ["museum", "children", "gift-box", "cultural", "coffee", "jewelry", "modeling"], 1);
-    const [currentModulePage,setCurrentModulePage] = useQueryPage("model", 1, 5);
+    const [currentModulePage,setCurrentModulePage] = useQueryPage("model", 1, 6);
+    const [currentGiftPage, setCurrentGiftPage] = useQueryPage("gift", 1, 3);
     const handleNextModulePage = () => {
         setCurrentModulePage(currentModulePage+1);
     }
@@ -54,7 +56,7 @@ const ProductDesign:React.FC = () => {
     }
     return(
         <div className={style.main}>
-            <div className={style.header}>
+            <div className={style.header} hidden={currentPage === 3 && currentGiftPage > 1}>
                 <h1 className={style.title1}>产品设计</h1>
                 <h3 className={style.title2}>Product Design</h3>
                 <ul className={style.ul}>
@@ -110,7 +112,9 @@ const ProductDesign:React.FC = () => {
                     </>
                 )}
                 {currentPage===3 && (
-                    <>
+                    <div className={style.giftPages}>
+                        {currentGiftPage > 1 && <button type="button" className={`${style.prev} ${style.giftPrevious}`} aria-label="礼盒上一页" onClick={() => setCurrentGiftPage(currentGiftPage - 1)}>&lt;&lt;</button>}
+                        {currentGiftPage === 1 && (
                         <div className={style.boxBody}>
                             <div className={style.box_top}>
                                 <div className={style.box_img_body}>
@@ -129,7 +133,10 @@ const ProductDesign:React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    </>
+                        )}
+                        {currentGiftPage > 1 && <GiftBoxPages page={currentGiftPage} />}
+                        {currentGiftPage < 3 && <button type="button" className={`${style.next} ${style.giftNext}`} aria-label="礼盒下一页" onClick={() => setCurrentGiftPage(currentGiftPage + 1)}>&gt;&gt;</button>}
+                    </div>
                 )}
                 {currentPage===4 && (
                     <>
@@ -193,7 +200,7 @@ const ProductDesign:React.FC = () => {
                 )}
                 {currentPage==7 && (
                     <>
-                        <div className={style.moduleDesignBody}>
+                        <div className={`${style.moduleDesignBody} ${currentModulePage === 6 ? style.petModelPage : ""}`}>
                             <div className={style.moduleheader}>
                                 <div className={style.ball}></div>
                                 <h1 className={style.module_title}>使用工具：<span className={style.module_title2}>Rhino+Key shot</span></h1>
@@ -203,7 +210,7 @@ const ProductDesign:React.FC = () => {
                             </div>
                             <div className={style.btn_body}>
                                 <div className={`${style.prev} ${currentModulePage===1?style.hidden:""}`} onClick={handlePrevModulePage}>&lt;&lt;</div>
-                                <div className={`${style.next} ${currentModulePage===5?style.hidden:""}`} onClick={handleNextModulePage}>&gt;&gt;</div>
+                                <div className={`${style.next} ${currentModulePage===6?style.hidden:""}`} onClick={handleNextModulePage}>&gt;&gt;</div>
                             </div>
                         </div>
                     </>
