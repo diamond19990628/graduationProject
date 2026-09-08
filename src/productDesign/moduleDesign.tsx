@@ -13,6 +13,9 @@ import module_32 from "../assets/ModuleDesign3_2.png";
 import module_33 from "../assets/ModuleDesign3_3.png";
 import module_41 from "../assets/ModuleDesign4_1.png";
 import module_42 from "../assets/ModuleDesign4_2.png";
+import module_51 from "../assets/ModuleDesign5_1.png";
+import module_52 from "../assets/ModuleDesign5_2.png";
+import module_53 from "../assets/ModuleDesign5_3.png";
 import style from "./moduleDesign.module.css";
 const ModuleDesign:React.FC<Props> = ({currentPage}) => {
     return(
@@ -70,6 +73,13 @@ const ModuleDesign:React.FC<Props> = ({currentPage}) => {
                         <img src={module_42} className={style.img4_img}/>
                     </div>
                 </>
+            )}
+            {currentPage==5 && (
+                <div className={style.img5_layout}>
+                    <img src={module_52} className={style.img5_front} alt="黄色烤面包机建模正视图"/>
+                    <img src={module_53} className={style.img5_top} alt="黄色烤面包机建模俯视图"/>
+                    <img src={module_51} className={style.img5_perspective} alt="黄色烤面包机建模透视图"/>
+                </div>
             )}
         </>
     );
