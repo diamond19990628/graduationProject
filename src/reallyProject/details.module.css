@@ -22,8 +22,11 @@
     align-items: center;
     justify-content: center;
 }
-.detailImg{
-    flex: 1;
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper .detailImg{
     min-width: 0;
     height: 100%;
     display: flex;
@@ -59,7 +62,6 @@
     font-size: 1.2vw;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
-.hidden { visibility: hidden; }
 .pagination {
     position: fixed;
     top: 50%;
@@ -76,12 +78,8 @@
 @media (max-width: 500px) {
     .detailBody{
         width: 90%;
-        height: auto;
+        height: 70vh;
         min-height: 70vh;
-    }
-    .detailImg{
-        width: 100%;
-        height: auto;
     }
     .img{
         width: 80%;
