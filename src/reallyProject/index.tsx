@@ -3,13 +3,12 @@ import aiCard from "../assets/ai-card-overview.webp";
 import tshyMiniProject from "../assets/ReallyProject1.png";
 import ReallyProject21 from "../assets/ReallyProject2_1.png";
 import ReallyProject22 from "../assets/ReallyProject2_2.png";
-import teaInvitation from "../assets/tea-invitation.webp";
 import { useQueryPage } from "../router/useRoutePage";
 import style from "./index.module.css";
 
 const ReallyProject:React.FC = () => {
     const navigate = useNavigate();
-    const [currentPage,setCurrentPage] = useQueryPage("page", 1, 4);
+    const [currentPage,setCurrentPage] = useQueryPage("page", 1, 3);
     const handleNextPage = () => {
         setCurrentPage(currentPage+1);
     }
@@ -59,15 +58,9 @@ const ReallyProject:React.FC = () => {
                             <button className={style.detailLink} onClick={() => navigate("/projects/ai-card")}>（查看详情）</button>
                         </>
                     )}
-                    {currentPage === 4 && (
-                        <>
-                            <h2 className={style.projectName}>《秦淮区非遗馆雨花茶展区邀请函》</h2>
-                            <img className={style.invitationImage} src={teaInvitation} alt="秦淮区非遗馆雨花茶展区邀请函" />
-                        </>
-                    )}
                 </div>
                 <div className={style.nextBody}>
-                    <div className={`${style.next} ${currentPage==4?style.hidden:""}`} onClick={handleNextPage}>&gt;</div>
+                    <div className={`${style.next} ${currentPage==3?style.hidden:""}`} onClick={handleNextPage}>&gt;</div>
                 </div>
             </div>
             
